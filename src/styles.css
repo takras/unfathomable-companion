@@ -1180,7 +1180,8 @@ button.toc-fab {
 .hits li:first-child {
   border-top: 0;
 }
-.hit {
+/* scoped: the dice faces use a "hit" class too */
+.hits .hit {
   display: block;
   width: 100%;
   text-align: left;
