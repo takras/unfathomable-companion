@@ -11,10 +11,26 @@ export type GameIconId =
   | "act-horror"
   | "track-travel"
   | "track-ritual"
-  | "track-choice";
+  | "track-choice"
+  | "res-fuel"
+  | "res-food"
+  | "res-sanity"
+  | "res-souls"
+  | "skill-influence"
+  | "skill-lore"
+  | "skill-observation"
+  | "skill-strength"
+  | "skill-will"
+  | "skill-treachery";
 
-export function GameIcon({ id, label, size = 32 }: { id: GameIconId; label?: string; size?: number }) {
+/** Skill icons keep their printed colours; everything else takes the text colour. */
+const COLOURED = new Set<GameIconId>(["skill-influence", "skill-lore", "skill-observation", "skill-strength", "skill-will"]);
+
+export function GameIcon({ id, label, size = 32 }: { id: GameIconId; label?: string; size?: number | string }) {
   const a11y = label ? { role: "img", "aria-label": label } : { "aria-hidden": true };
+  if (COLOURED.has(id)) {
+    return <img className="game-icon coloured" src={files[`../assets/icons/${id}.png`]} alt={label ?? ""} style={{ width: size, height: size }} />;
+  }
   if (id === "track-choice") {
     // Its box outline touches the icon on every card scan, so it is drawn here instead.
     return (

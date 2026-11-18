@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, lazy, Suspense, useEffect, useState } from "react";
 import { NavIcon } from "./components/NavIcon";
 import { getLanguage, t } from "./i18n";
 import { useStore } from "./state/store";
@@ -8,8 +8,11 @@ import { MonstersView } from "./views/MonstersView";
 import { RolesView } from "./views/RolesView";
 import { SetupView } from "./views/SetupView";
 
+// The rules text is ~115 KB; load it only when the Rules tab is opened.
+const RulesView = lazy(() => import("./views/RulesView").then((m) => ({ default: m.RulesView })));
+
 // Same layout as BSG Companion; Monsters takes the place BSG gives to Execution.
-const DOCK = ["setup", "roles", "dice", "monsters"] as const;
+const DOCK = ["setup", "roles", "dice", "monsters", "rules"] as const;
 
 const readHash = () => window.location.hash.replace(/^#\/?/, "") || "setup";
 
@@ -27,11 +30,25 @@ export function App() {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
+  // Sticky things below the header (the rules search, jump targets) need its height.
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>(".top");
+    if (!header) return;
+    const set = () => document.documentElement.style.setProperty("--header-h", `${header.offsetHeight}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(header);
+    return () => ro.disconnect();
+  }, []);
+
   const go = (r: string) => {
     window.location.hash = `/${r}`;
   };
 
-  const current = (DOCK as readonly string[]).includes(route) ? route : "setup";
+  // "rules/4.13" = a page and a target on it
+  const [tab, ...rest] = route.split("/");
+  const param = rest.join("/") || undefined;
+  const current = (DOCK as readonly string[]).includes(tab) ? tab : "setup";
   const { config, players, phase } = state;
 
   return (
@@ -47,20 +64,22 @@ export function App() {
                 <span className={phase === "playing" ? "ok" : ""}>{t(phase === "playing" ? "app.status.playing" : "app.status.setup")}</span>
               </div>
             </div>
-            <button className="top-btn" onClick={toggleTheme} aria-label={t("app.theme.aria", { theme: t(`app.theme.${theme}`) })}>
-              {t(`app.theme.${theme}`)}
-            </button>
-            <button
-              className="top-btn danger"
-              onClick={() => {
-                if (confirm(t("app.reset.confirm"))) {
-                  dispatch({ type: "reset" });
-                  go("setup");
-                }
-              }}
-            >
-              {t("app.reset")}
-            </button>
+            <div className="top-actions">
+              <button className="top-btn" onClick={toggleTheme} aria-label={t("app.theme.aria", { theme: t(`app.theme.${theme}`) })}>
+                {t(`app.theme.${theme}`)}
+              </button>
+              <button
+                className="top-btn danger"
+                onClick={() => {
+                  if (confirm(t("app.reset.confirm"))) {
+                    dispatch({ type: "reset" });
+                    go("setup");
+                  }
+                }}
+              >
+                {t("app.reset")}
+              </button>
+            </div>
           </div>
           <nav className="dock" aria-label={t("app.nav.aria")}>
             {DOCK.map((id) => (
@@ -77,6 +96,11 @@ export function App() {
           {current === "roles" && <RolesView go={go} />}
           {current === "dice" && <DiceView />}
           {current === "monsters" && <MonstersView />}
+          {current === "rules" && (
+            <Suspense fallback={<p className="view muted">{t("rules.loading")}</p>}>
+              <RulesView target={param} go={go} />
+            </Suspense>
+          )}
         </main>
 
         <footer className="footer small muted">

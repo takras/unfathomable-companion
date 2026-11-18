@@ -30,6 +30,14 @@ export function NavIcon({ name }: { name: string }) {
           <path d="M3 12h18M12 2l-4 10 4 10M12 2l4 10-4 10" />
         </svg>
       );
+    case "rules":
+      // open book
+      return (
+        <svg {...common}>
+          <path d="M12 6c-2-1.5-5-2-8.5-1.5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5v-13C17 4 14 4.5 12 6z" />
+          <path d="M12 6v13" />
+        </svg>
+      );
     default:
       return null;
   }

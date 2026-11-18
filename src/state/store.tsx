@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useReducer, type ReactNode } from "react";
 import { characterById } from "../data/characters";
 import { activationById, type ActivationId } from "../data/monsters";
+import { preludeById, type PreludeCounts } from "../data/preludes";
 import { TITLE_LABEL, TITLES, type TitleId } from "../data/succession";
 import { t as tr } from "../i18n";
 import { initialTitles, nextHolder } from "../logic/succession";
@@ -23,8 +24,12 @@ export interface Config {
   abyss: boolean;
   /** Appendix I: no Cultist card in 4- and 6-player games */
   noCultist: boolean;
-  /** From the Abyss: resolve a day, twilight and night prelude card during setup */
+  /** From the Abyss: resolve prelude cards during setup */
   preludes: boolean;
+  /** How many prelude cards of each type to draw (the book's standard is one of each) */
+  preludeCounts: PreludeCounts;
+  /** Prelude cards the group leaves out of the draw */
+  preludeExcluded: string[];
 }
 
 export interface State {
@@ -38,10 +43,18 @@ export interface State {
   awakened: boolean;
   /** Activation icons picked on the Monsters page, in the order they resolve */
   activations: ActivationId[];
+  /** Prelude cards drawn for this game, in resolution order */
+  preludeDraw: string[];
   log: string[];
 }
 
-export const defaultConfig: Config = { abyss: false, noCultist: false, preludes: false };
+export const defaultConfig: Config = {
+  abyss: false,
+  noCultist: false,
+  preludes: false,
+  preludeCounts: { day: 1, twilight: 1, night: 1 },
+  preludeExcluded: [],
+};
 
 const initialState: State = {
   version: 1,
@@ -51,6 +64,7 @@ const initialState: State = {
   titles: {},
   awakened: false,
   activations: [],
+  preludeDraw: [],
   log: [],
 };
 
@@ -65,6 +79,7 @@ export type Action =
   | { type: "giveTitle"; title: TitleId; seat: number }
   | { type: "setAwakened"; value: boolean }
   | { type: "setActivations"; ids: ActivationId[] }
+  | { type: "setPreludeDraw"; ids: string[] }
   | { type: "reset" };
 
 export const STORAGE_KEY = "unf-companion-state-v1";
@@ -76,7 +91,8 @@ function parse(raw: string | null): State {
     if (parsed.version !== 1) return initialState;
     // Drop players whose character no longer exists (e.g. a renamed id) rather than crashing on them.
     const players = (parsed.players ?? []).filter((p) => characterById[p.characterId]);
-    return { ...initialState, ...parsed, players, config: { ...defaultConfig, ...parsed.config } };
+    const preludeDraw = (parsed.preludeDraw ?? []).filter((id) => preludeById[id]);
+    return { ...initialState, ...parsed, players, preludeDraw, config: { ...defaultConfig, ...parsed.config } };
   } catch {
     return initialState;
   }
@@ -86,6 +102,12 @@ function parse(raw: string | null): State {
 function normalize(config: Config): Config {
   return config.abyss ? config : { ...config, preludes: false };
 }
+
+/** Preludes in play for this game: drawn, with the expansion and preludes switched on. */
+export const preludesInPlay = (s: State) => (s.config.abyss && s.config.preludes ? s.preludeDraw : []);
+
+/** The Delegate Authority prelude hands each title to the second in line at the start. */
+export const delegated = (s: State) => preludesInPlay(s).some((id) => preludeById[id]?.delegate);
 
 const nameOf = (s: State, seat: number | undefined) =>
   characterById[s.players.find((p) => p.seat === seat)?.characterId ?? ""]?.short ?? "-";
@@ -106,7 +128,7 @@ function reducer(s: State, a: Action): State {
     case "removeSeat":
       return { ...s, players: s.players.filter((p) => p.seat !== a.seat) };
     case "startGame": {
-      const titles = initialTitles(s.players);
+      const titles = initialTitles(s.players, delegated(s));
       const log = TITLES.filter((t) => titles[t] !== undefined).map((t) =>
         tr("log.titleStart", { title: TITLE_LABEL[t], name: nameOf(s, titles[t]) }),
       );
@@ -158,6 +180,8 @@ function reducer(s: State, a: Action): State {
       return { ...s, awakened: a.value, log: a.value ? [...s.log, tr("log.awakening")] : s.log };
     case "setActivations":
       return { ...s, activations: a.ids };
+    case "setPreludeDraw":
+      return { ...s, preludeDraw: a.ids };
     case "reset":
       // A new game, keeping the game settings.
       return { ...initialState, config: s.config };

@@ -1,0 +1,3597 @@
+[
+ {
+  "num": "",
+  "title": "Glossary",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "This glossary provides players with detailed rules for **Unfathomable**. Entries are organized alphabetically by topic. If a player is unable to find a topic, they should use the index on page 24."
+   }
+  ],
+  "related": []
+ },
+ {
+  "num": "1",
+  "title": "Abilities",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Most cards have abilities that players can use at various times during the game. Each ability describes when a player can use it and how its effects are resolved."
+   },
+   {
+    "type": "h",
+    "text": "Interpreting Abilities",
+    "num": "1.1"
+   },
+   {
+    "type": "rule",
+    "text": "The words “you” and “your” in card text refer to the player resolving the card in question.",
+    "num": "1.2"
+   },
+   {
+    "type": "bullet",
+    "text": "When used on a mythos card, these words refer to the current player unless that card has a choice crisis for a player other than the current player. In such a case, “you” and “your” refers to the player making the choice on that card."
+   },
+   {
+    "type": "rule",
+    "text": "If an effect uses the word “cannot,” it is absolute and cannot be overridden by other abilities.",
+    "num": "1.3"
+   },
+   {
+    "type": "rule",
+    "text": "If an ability uses the word “may,” its effect is optional.",
+    "num": "1.4"
+   },
+   {
+    "type": "rule",
+    "text": "If an effect uses the word “to,” it indicates a cost that must be paid. The effect preceding the word “to” must occur for the following effect to resolve.",
+    "num": "1.5"
+   },
+   {
+    "type": "rule",
+    "text": "When the timing of an effect uses the word “would,” the effect resolves before the event associated with “would” occurs. If such an effect uses the word “instead,” the event associated with “would” is replaced by a new effect.",
+    "num": "1.6"
+   },
+   {
+    "type": "example",
+    "text": "*Example: Beatrice Sharpe’s feat card, Perfect Number, reads “When a die would be rolled, if you are not in the Brig, you may set that die to any side instead.” When Beatrice Sharpe uses this ability, the die is not rolled and she chooses the outcome of the roll.*"
+   },
+   {
+    "type": "rule",
+    "text": "If an effect instructs a player to “look at” a component that has hidden information, generally the top cards of a deck, then only that player may look at those cards.",
+    "num": "1.7"
+   },
+   {
+    "type": "rule",
+    "text": "The phrase “if able” is used in instances where the game state may prevent the instruction from being completed. If the instruction cannot be completed, it is ignored.",
+    "num": "1.8"
+   },
+   {
+    "type": "rule",
+    "text": "The word “then” is used to indicate timing. A sentence that begins with “then” resolves only after any previous effects are resolved or fail to resolve. The resolution of any effect preceding the sentence that begins with “then” is **not** a prerequisite for resolving the effect of that sentence.",
+    "num": "1.9"
+   },
+   {
+    "type": "rule",
+    "text": "Some abilities have the restriction “Limit once per turn.” These abilities may only be used once during each player turn.",
+    "num": "1.10"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player has an opportunity to resolve such an ability during another player’s turn, they can do so once during that turn, even if they already resolved the ability during their own turn."
+   },
+   {
+    "type": "example",
+    "text": "*Example: Arjun Singh’s Deck Chief ability reads, “***Action:* Move to any deck space. Then perform 1 action. Limit once per turn.” Arjun can use this ability once during his turn, and then again during the following player’s turn if that player gives Arjun the ability to perform an action, such as with the Coordinated Effort skill card.*"
+   },
+   {
+    "type": "bullet",
+    "text": "A limit on an ability with multiple sentences applies to the entire ability."
+   },
+   {
+    "type": "rule",
+    "text": "Some mythos cards are placed in a player’s play area and cause the player to “gain the following abilities.” Those abilities remain in effect for as long as the mythos card is in the player’s play area.",
+    "num": "1.11"
+   },
+   {
+    "type": "rule",
+    "text": "Text contained within parentheses “()” is reminder text.",
+    "num": "1.12"
+   },
+   {
+    "type": "h",
+    "text": "Timing",
+    "num": "1.13"
+   },
+   {
+    "type": "rule",
+    "text": "[[DICE ROLLS:]] Before a die is rolled for any reason, players have an opportunity to use abilities that resolve before a die is rolled. After the die is rolled, players have an opportunity to use abilities that resolve after a die is rolled, such as rerolling that die, before resolving the outcome of the die roll.",
+    "num": "1.14"
+   },
+   {
+    "type": "rule",
+    "text": "[[SKILL CHECKS:]] Before any player contributes cards to a skill check, players have an opportunity to use abilities that resolve before cards are added to a skill check.",
+    "num": "1.15"
+   },
+   {
+    "type": "rule",
+    "text": "[[TIMING CONFLICTS:]] Any time a decision must be made about the resolution order of two or more simultaneous events, the current player makes that decision.",
+    "num": "1.16"
+   },
+   {
+    "type": "example",
+    "text": "*Example: When activating all Deep Ones, the current player decides the order in which the Deep Ones activate.*"
+   },
+   {
+    "type": "bullet",
+    "text": "If multiple players wish to use abilities at the same time, the current player chooses the order in which those players have an opportunity to resolve an ability."
+   },
+   {
+    "type": "sub",
+    "text": "The current player may first ask what abilities those players wish to use before deciding their order, but those players are not required to be truthful or even say anything about what ability they want to use."
+   },
+   {
+    "type": "sub",
+    "text": "A player can choose not to use any ability when it is their opportunity to act."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Dice",
+   "Mythos Cards"
+  ]
+ },
+ {
+  "num": "2",
+  "title": "Action Abilities",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Any ability prefaced with “Action:” is an action ability and requires that a player perform an action to use that ability."
+   },
+   {
+    "type": "rule",
+    "text": "Players can use action abilities found on their character sheet, feat card, item cards, title cards, or any other card in the player’s play area.",
+    "num": "2.1"
+   },
+   {
+    "type": "bullet",
+    "text": "Revealed traitors cannot use abilities on their character sheet."
+   },
+   {
+    "type": "rule",
+    "text": "Players can use action abilities on skill cards in their hand.",
+    "num": "2.2"
+   },
+   {
+    "type": "bullet",
+    "text": "When a player uses the action ability on a skill card, they discard that card after resolving its ability."
+   },
+   {
+    "type": "bullet",
+    "text": "Humans cannot use action abilities on treachery skill cards."
+   },
+   {
+    "type": "rule",
+    "text": "Humans can use an action ability in their space.",
+    "num": "2.3"
+   },
+   {
+    "type": "bullet",
+    "text": "A human cannot perform this action if there is a least one Deep One or revealed traitor in that space. **This rule does not apply to the Brig space.**"
+   },
+   {
+    "type": "bullet",
+    "text": "If the human is in a damaged interior space, they can perform the action ability on the damage card in that space to repair the space."
+   },
+   {
+    "type": "bullet",
+    "text": "If the human is in an undamaged interior space, they can resolve the action ability for that space, found on the player reference sheet."
+   },
+   {
+    "type": "bullet",
+    "text": "Each interior space’s action ability can only be used once per turn."
+   },
+   {
+    "type": "sub",
+    "text": "Repairing a space does not count against this limit."
+   },
+   {
+    "type": "bullet",
+    "text": "Revealed traitors cannot use action abilities in their space."
+   }
+  ],
+  "related": [
+   "Item Cards",
+   "Skill Cards"
+  ]
+ },
+ {
+  "num": "3",
+  "title": "Actions",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The current player performs two actions during their action step. The action options they have are determined by whether they are a human or a revealed traitor."
+   },
+   {
+    "type": "rule",
+    "text": "Some action abilities allow a player to perform one or more additional actions. These abilities allow a player to perform more than two actions during their turn.",
+    "num": "3.1"
+   },
+   {
+    "type": "h",
+    "text": "Human Actions",
+    "num": "3.2"
+   },
+   {
+    "type": "p",
+    "text": "Humans can perform the following actions:"
+   },
+   {
+    "type": "rule",
+    "text": "Move to any ship space.",
+    "num": "3.3"
+   },
+   {
+    "type": "bullet",
+    "text": "The player cannot perform this action if they are in the Brig."
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot move to water spaces or the Deep."
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot voluntarily move to the Brig or the Sick Bay."
+   },
+   {
+    "type": "rule",
+    "text": "Attack a Deep One or revealed traitor in their space.",
+    "num": "3.4"
+   },
+   {
+    "type": "rule",
+    "text": "Rescue a passenger in their space.",
+    "num": "3.5"
+   },
+   {
+    "type": "rule",
+    "text": "Enable the trading of items between players in the same space.",
+    "num": "3.6"
+   },
+   {
+    "type": "bullet",
+    "text": "Any number of players in the space of the player who enabled the trade can give and/or receive items and the enabling player is not required to be involved in an exchange."
+   },
+   {
+    "type": "rule",
+    "text": "Use an action ability in their play area or on a skill card in their hand.",
+    "num": "3.7"
+   },
+   {
+    "type": "bullet",
+    "text": "These abilities can be found on the player’s character sheet, feat card, item cards, title cards, or any other card in the player’s play area."
+   },
+   {
+    "type": "bullet",
+    "text": "When a player uses the action ability on a skill card in their hand, they discard that card after resolving its ability."
+   },
+   {
+    "type": "rule",
+    "text": "Use an action ability in their space.",
+    "num": "3.8"
+   },
+   {
+    "type": "bullet",
+    "text": "A player cannot perform this action if there is a least one Deep One or revealed traitor in that space. **This rule does not apply to the Brig space.**"
+   },
+   {
+    "type": "bullet",
+    "text": "If the player is in a damaged interior space, they can perform the action ability on the damage card in that space to repair the space."
+   },
+   {
+    "type": "bullet",
+    "text": "If the player is in an undamaged interior space, they can resolve the action ability for that space."
+   },
+   {
+    "type": "bullet",
+    "text": "Each space’s action ability can only be used once per turn."
+   },
+   {
+    "type": "sub",
+    "text": "Repairing a space does not count against this limit."
+   },
+   {
+    "type": "h",
+    "text": "Revealed Traitor Actions",
+    "num": "3.9"
+   },
+   {
+    "type": "p",
+    "text": "Revealed traitors can perform the following actions:"
+   },
+   {
+    "type": "rule",
+    "text": "Move to any ship space.",
+    "num": "3.10"
+   },
+   {
+    "type": "bullet",
+    "text": "If the current player is in the Brig, they must discard skill cards from their hand with a total value of 12 or more in order to perform this action."
+   },
+   {
+    "type": "sub",
+    "text": "The player must discard all the skill cards at the same time immediately before moving out of the Brig."
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot move to water spaces or the Deep."
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot voluntarily move to the Brig or the Sick Bay."
+   },
+   {
+    "type": "rule",
+    "text": "Attack a human in their space.",
+    "num": "3.11"
+   },
+   {
+    "type": "rule",
+    "text": "Defeat a passenger in their space **if there is not a human in their space**.",
+    "num": "3.12"
+   },
+   {
+    "type": "rule",
+    "text": "Use an action ability on a card in their hand or play area.",
+    "num": "3.13"
+   },
+   {
+    "type": "bullet",
+    "text": "When a player uses the ability on a skill card in their hand, they must discard that card after resolving the ability."
+   },
+   {
+    "type": "bullet",
+    "text": "Revealed traitors cannot use abilities on their character sheet or in their space."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Attack",
+   "Passengers",
+   "Repair",
+   "Spaces"
+  ]
+ },
+ {
+  "num": "4",
+  "title": "Activations",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Monsters activate when an activation icon is resolved."
+   },
+   {
+    "type": "rule",
+    "text": "There are three activation icons:",
+    "num": "4.1"
+   },
+   {
+    "type": "bullet",
+    "text": "Mother Hydra ({mother-hydra})"
+   },
+   {
+    "type": "bullet",
+    "text": "Father Dagon ({father-dagon})"
+   },
+   {
+    "type": "bullet",
+    "text": "Deep Ones ({deep-ones})"
+   },
+   {
+    "type": "rule",
+    "text": "Each mythos card has an activation icon in the lower right corner that is resolved as a part of the resolution of that card.",
+    "num": "4.2"
+   },
+   {
+    "type": "rule",
+    "text": "Some cards show activation icons in their text and instruct the players to “resolve the following activation icons.”",
+    "num": "4.3"
+   },
+   {
+    "type": "bullet",
+    "text": "When resolving an activation icon in this way, players follow the normal monster activation rules."
+   },
+   {
+    "type": "rule",
+    "text": "Monsters in the Deep cannot activate.",
+    "num": "4.4"
+   },
+   {
+    "type": "h",
+    "text": "Activating Mother Hydra",
+    "num": "4.5"
+   },
+   {
+    "type": "p",
+    "text": "When Mother Hydra activates, she attacks and damages the ship. Then she moves one water space toward the front of the ship."
+   },
+   {
+    "type": "rule",
+    "text": "To damage the ship, Mother Hydra damages the interior space of the ship that is closest to the water space where she is located.",
+    "num": "4.6"
+   },
+   {
+    "type": "bullet",
+    "text": "Players can use the movement arrows from Mother Hydra’s space to find the closest interior space."
+   },
+   {
+    "type": "bullet",
+    "text": "If that interior space is already damaged, she damages the undamaged interior space closest to the original space."
+   },
+   {
+    "type": "sub",
+    "text": "If there are multiple damageable spaces equidistant from the already-damaged space, she damages the one that has the highest number printed in it."
+   },
+   {
+    "type": "bullet",
+    "text": "If there are six damaged spaces at the same time, the game ends."
+   },
+   {
+    "type": "rule",
+    "text": "To move, Mother Hydra moves to the adjacent water space that is closest to the front of the ship.",
+    "num": "4.7"
+   },
+   {
+    "type": "bullet",
+    "text": "If Mother Hydra is already in one of the numbered water spaces when she activates, she does not move."
+   },
+   {
+    "type": "rule",
+    "text": "**If Mother Hydra is in the Deep**, instead of activating her, spawn two Deep Ones in the Deep. Then, if there are four or more Deep Ones in the Deep, roll the die and move Mother Hydra and all Deep Ones from the Deep to the water space that matches the result.",
+    "num": "4.8"
+   },
+   {
+    "type": "bullet",
+    "text": "If there are not enough Deep Ones in the supply to spawn, the game ends."
+   },
+   {
+    "type": "h",
+    "text": "Activating Father Dagon",
+    "num": "4.9"
+   },
+   {
+    "type": "p",
+    "text": "When Father Dagon activates, he spawns two Deep Ones on the ship. Then he moves one water space toward the front of the ship."
+   },
+   {
+    "type": "rule",
+    "text": "To spawn Deep Ones, Father Dagon places two Deep Ones in the deck space adjacent to him.",
+    "num": "4.10"
+   },
+   {
+    "type": "bullet",
+    "text": "The movement arrow in Father Dagon’s space points to the deck space that is adjacent to him."
+   },
+   {
+    "type": "bullet",
+    "text": "If there are not enough Deep Ones in the supply for Father Dagon to spawn, the game ends."
+   },
+   {
+    "type": "rule",
+    "text": "To move, Father Dagon moves to the adjacent water space that is closest to the front of the ship.",
+    "num": "4.11"
+   },
+   {
+    "type": "bullet",
+    "text": "If Father Dagon is already in one of the numbered water spaces when he activates, he does not move."
+   },
+   {
+    "type": "rule",
+    "text": "**If Father Dagon is in the Deep**, instead of activating him, spawn two Deep Ones in the Deep. Then, if there are four or more Deep Ones in the Deep, roll the die and move Father Dagon and all Deep Ones from the Deep to the water space that matches the result.",
+    "num": "4.12"
+   },
+   {
+    "type": "bullet",
+    "text": "If there are not enough Deep Ones in the supply to spawn, the game ends."
+   },
+   {
+    "type": "h",
+    "text": "Activating Deep Ones",
+    "num": "4.13"
+   },
+   {
+    "type": "p",
+    "text": "Each Deep One activates independently of each other Deep One. When multiple Deep Ones activate at the same time, the current player chooses the order in which to activate the Deep Ones."
+   },
+   {
+    "type": "p",
+    "text": "When a Deep One activates, it performs the first of the following options that it is able to:"
+   },
+   {
+    "type": "rule",
+    "text": "[[OPTION 1]]—Attack a human in the Deep One’s space.",
+    "num": "4.14"
+   },
+   {
+    "type": "bullet",
+    "text": "If there are multiple humans in the space, the current player chooses one to be the defender."
+   },
+   {
+    "type": "bullet",
+    "text": "Deep Ones do not attack revealed traitors."
+   },
+   {
+    "type": "rule",
+    "text": "[[OPTION 2]]—Defeat a passenger token in the Deep One’s space.",
+    "num": "4.15"
+   },
+   {
+    "type": "rule",
+    "text": "[[OPTION 3]]—Damage the Deep One’s space.",
+    "num": "4.16"
+   },
+   {
+    "type": "bullet",
+    "text": "The Deep One can only damage its space if that space is an interior space and is not already damaged."
+   },
+   {
+    "type": "bullet",
+    "text": "To damage the space, draw the top card of the damage deck and resolve it."
+   },
+   {
+    "type": "sub",
+    "text": "If the damage card drawn removes itself from the game, the Deep One has still completed its activation."
+   },
+   {
+    "type": "rule",
+    "text": "[[OPTION 4]]—Move to an adjacent space. Where a Deep One moves depends on the type of space it currently occupies:",
+    "num": "4.17"
+   },
+   {
+    "type": "bullet",
+    "text": "If in a water or deck space, the Deep One follows the movement arrow in the space."
+   },
+   {
+    "type": "bullet",
+    "text": "If in an interior space, the Deep One moves toward the closest undamaged space. If two or more undamaged interior spaces are equidistant from the Deep One’s space, it moves toward the space with the highest printed number."
+   },
+   {
+    "type": "rule",
+    "text": "**If there are no Deep Ones on the board (except for in the Deep)**, spawn two Deep Ones in the Deep. Then, if there are four or more Deep Ones in the Deep, roll the die and move **all monsters** from the Deep to the water space that matches the result.",
+    "num": "4.18"
+   },
+   {
+    "type": "bullet",
+    "text": "If there are not enough Deep Ones in the supply to spawn, the game ends."
+   }
+  ],
+  "related": [
+   "Attack",
+   "Damage",
+   "Deep",
+   "Defeated",
+   "Ending the Game",
+   "Front of the Ship",
+   "Monsters",
+   "Mythos Cards",
+   "Passengers",
+   "Revealed Traitors",
+   "Spaces",
+   "Spawn"
+  ]
+ },
+ {
+  "num": "5",
+  "title": "Adjacency",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Two spaces are adjacent if they share a border."
+   },
+   {
+    "type": "rule",
+    "text": "Spaces that share only a corner are not adjacent.",
+    "num": "5.1"
+   },
+   {
+    "type": "rule",
+    "text": "A component is adjacent to the same spaces and components as the space it occupies.",
+    "num": "5.2"
+   },
+   {
+    "type": "rule",
+    "text": "Components in adjacent spaces are adjacent to each other.",
+    "num": "5.3"
+   }
+  ],
+  "related": [
+   "Spaces"
+  ]
+ },
+ {
+  "num": "6",
+  "title": "Attack",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Characters and Deep Ones can perform an attack in an attempt to defeat another character or Deep One in their space."
+   },
+   {
+    "type": "rule",
+    "text": "There are several ways in which an attack can be initiated:",
+    "num": "6.1"
+   },
+   {
+    "type": "bullet",
+    "text": "Players can spend an action to perform an attack during their Action step."
+   },
+   {
+    "type": "bullet",
+    "text": "Some card abilities allow players to perform attacks."
+   },
+   {
+    "type": "bullet",
+    "text": "Deep Ones can perform attacks when they activate."
+   },
+   {
+    "type": "h",
+    "text": "Resolving an Attack",
+    "num": "6.2"
+   },
+   {
+    "type": "p",
+    "text": "To resolve an attack, perform the following steps in order:"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—[[DECLARE ATTACKER:]] The player or Deep One performing the attack is the attacker.",
+    "num": "6.3"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—[[DECLARE DEFENDER:]] If the attacker is a player, that player chooses the defender. If the attacker is a Deep One, the current player chooses the defender.",
+    "num": "6.4"
+   },
+   {
+    "type": "bullet",
+    "text": "The attacker must share a space with the defender."
+   },
+   {
+    "type": "bullet",
+    "text": "If the attacker is a human, the defender must be either a Deep One or a revealed traitor."
+   },
+   {
+    "type": "bullet",
+    "text": "If the attacker is a revealed traitor or a Deep One, the defender must be a human."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—[[DETERMINE THE TARGET NUMBER:]] The target number is the minimum die result needed for the attack to succeed.",
+    "num": "6.5"
+   },
+   {
+    "type": "bullet",
+    "text": "If the defender is a Deep One, the target number is 4."
+   },
+   {
+    "type": "bullet",
+    "text": "If the defender is a character, the target number is 6."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 4]]—[[USE “BEFORE A DIE IS ROLLED” ABILITIES:]] Players can choose to use any of their “before a die is rolled” abilities.",
+    "num": "6.6"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 5]]—[[ROLL THE DIE:]] A player rolls the die.",
+    "num": "6.7"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 6]]—[[USE REROLL ABILITIES:]] Players can choose to use any of their reroll abilities.",
+    "num": "6.8"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player uses a reroll ability, go back to step 4."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 7]]—[[DETERMINE OUTCOME:]] If the result on the die, plus any modifiers, is greater than or equal to the target number, the attack succeeds. Otherwise, the attack fails.",
+    "num": "6.9"
+   },
+   {
+    "type": "bullet",
+    "text": "If the attack succeeds, the defender is defeated."
+   },
+   {
+    "type": "sub",
+    "text": "If the defender is a Deep One, that Deep One is returned to the supply."
+   },
+   {
+    "type": "sub",
+    "text": "If the defender is a human, that human is moved to the Sick Bay."
+   },
+   {
+    "type": "sub",
+    "text": "If the defender is a revealed traitor, that traitor is moved to the Brig."
+   },
+   {
+    "type": "bullet",
+    "text": "If the attack fails, there is no effect."
+   }
+  ],
+  "related": [
+   "Brig",
+   "Defeated",
+   "Dice",
+   "Sick Bay"
+  ]
+ },
+ {
+  "num": "7",
+  "title": "Awakening Phase",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "When the ship reaches the midway point in its journey by having waypoint cards with a total distance of 6 or more in play, the awakening phase occurs."
+   },
+   {
+    "type": "p",
+    "text": "To resolve the awakening phase, players follow these steps:"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—After resolving the waypoint card that brings the total distance to 6 or more, deal one loyalty card to each player from the loyalty deck created during setup.",
+    "num": "7.1"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—Players simultaneously look at all of their loyalty cards and, when all players are done, return their cards facedown to their respective play areas.",
+    "num": "7.2"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—If there are any revealed traitors, starting with the current player and proceeding clockwise around the table, each revealed traitor gives their newly received loyalty card to the human of their choice.",
+    "num": "7.3"
+   },
+   {
+    "type": "bullet",
+    "text": "Give any players receiving these cards an opportunity to review all of their loyalty cards."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 4]]—Resume the game where it left off (usually at the end of resolving a mythos card).",
+    "num": "7.4"
+   },
+   {
+    "type": "rule",
+    "text": "The awakening phase only occurs once per game.",
+    "num": "7.5"
+   }
+  ],
+  "related": [
+   "Mythos Cards",
+   "Tracks",
+   "Waypoint Cards"
+  ]
+ },
+ {
+  "num": "8",
+  "title": "Back of the Ship",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The back of the ship are the two water spaces that are adjacent to deck spaces 7 and 8."
+   },
+   {
+    "type": "rule",
+    "text": "All monsters in each of the spaces at the back of the ship move to the Deep each time the travel track advances.",
+    "num": "8.1"
+   }
+  ],
+  "related": [
+   "Deep",
+   "Front of the Ship",
+   "Spaces",
+   "Tracks"
+  ]
+ },
+ {
+  "num": "9",
+  "title": "Brig",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The Brig is where human players detain other players suspected of being traitors as well as revealed traitors that have been defeated."
+   },
+   {
+    "type": "rule",
+    "text": "A human can move another human to the Brig by performing the action ability of the Captain’s Cabin, which requires a skill check to be passed.",
+    "num": "9.1"
+   },
+   {
+    "type": "bullet",
+    "text": "All players can add cards to the skill check initiated by the Captain’s Cabin’s action ability."
+   },
+   {
+    "type": "rule",
+    "text": "When a human moves to the Brig, they lose any titles they have.",
+    "num": "9.2"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor moves to the Brig when they are defeated.",
+    "num": "9.3"
+   },
+   {
+    "type": "rule",
+    "text": "A player in the Brig cannot move out of the space normally.",
+    "num": "9.4"
+   },
+   {
+    "type": "bullet",
+    "text": "For a human to move out of the Brig, they must perform the action ability of the Brig, which requires a skill check to be passed."
+   },
+   {
+    "type": "sub",
+    "text": "The presence of a revealed traitor in the Brig does **not** prevent a human from using that space’s action ability."
+   },
+   {
+    "type": "sub",
+    "text": "All players can add cards to the skill check initiated by the Brig’s action ability."
+   },
+   {
+    "type": "bullet",
+    "text": "For a revealed traitor to move out of the Brig, they must first discard skill cards from hand with a total value of 12 or more."
+   },
+   {
+    "type": "sub",
+    "text": "The player must discard all the skill cards at the same time immediately before moving out of the Brig."
+   },
+   {
+    "type": "bullet",
+    "text": "Abilities that move characters cannot move a character out of the Brig unless that ability specifically uses the word “Brig.”"
+   },
+   {
+    "type": "rule",
+    "text": "A player in the Brig cannot add more than one skill card to any single skill check.",
+    "num": "9.5"
+   },
+   {
+    "type": "rule",
+    "text": "A player in the Brig cannot use abilities on item cards in their play area.",
+    "num": "9.6"
+   },
+   {
+    "type": "bullet",
+    "text": "While a player is in the Brig, their active Improvement item is not added to their skill set."
+   },
+   {
+    "type": "rule",
+    "text": "During their Mythos step, a human in the Brig resolves only the activation icon and track icon on their mythos card. They do not resolve the card’s crisis.",
+    "num": "9.7"
+   },
+   {
+    "type": "bullet",
+    "text": "If the track icon is a “choice of track” ({track-choice}) icon, the player with the Captain title makes the choice."
+   },
+   {
+    "type": "bullet",
+    "text": "If a character-specific mythos card is drawn and that character is in the Brig, is not in the game, or has revealed as a traitor, that card is discarded and redrawn as normal."
+   },
+   {
+    "type": "rule",
+    "text": "If a human in the Brig is defeated, they remain in the Brig.",
+    "num": "9.8"
+   },
+   {
+    "type": "rule",
+    "text": "Players cannot voluntarily move to the Brig.",
+    "num": "9.9"
+   },
+   {
+    "type": "rule",
+    "text": "The Brig cannot be damaged.",
+    "num": "9.10"
+   },
+   {
+    "type": "rule",
+    "text": "Deep Ones cannot spawn in or move to the Brig.",
+    "num": "9.11"
+   },
+   {
+    "type": "rule",
+    "text": "Players in the Brig space draw their complete set of skill cards during their Receive Skills step.",
+    "num": "9.12"
+   },
+   {
+    "type": "rule",
+    "text": "Players can use the abilities of skill cards while in the Brig.",
+    "num": "9.13"
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Defeated",
+   "Mythos Cards",
+   "Revealed Traitors",
+   "Skill Checks",
+   "Skill Set",
+   "Titles"
+  ]
+ },
+ {
+  "num": "10",
+  "title": "Chaos Deck",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The chaos deck is composed of two cards of each skill type, except for treachery ({treachery}). It is placed on the chaos deck space on the board next to the Deep."
+   },
+   {
+    "type": "rule",
+    "text": "At the start of each skill check, two cards from the top of the chaos deck are added facedown to the skill check.",
+    "num": "10.1"
+   },
+   {
+    "type": "rule",
+    "text": "When the last card is taken from the chaos deck, create a new chaos deck by taking two cards from each non-treachery skill deck and shuffling them together.",
+    "num": "10.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If a skill deck and its discard pile collectively have fewer than two cards in them, do not add any cards from that skill deck to the chaos deck."
+   },
+   {
+    "type": "rule",
+    "text": "Players cannot look at the cards in the chaos deck.",
+    "num": "10.3"
+   },
+   {
+    "type": "rule",
+    "text": "The number of cards remaining in the chaos deck is open information. Any player can count the number of cards remaining in the deck without looking at the front of the cards.",
+    "num": "10.4"
+   },
+   {
+    "type": "rule",
+    "text": "When instructed to “shuffle X treachery cards into the chaos deck,” take the top X cards of the treachery skill deck and shuffle them together with all of the cards in the chaos deck. Then return those cards to the space on the board for the chaos deck.",
+    "num": "10.5"
+   }
+  ],
+  "related": [
+   "Open Information",
+   "Skill Cards",
+   "Skill Checks"
+  ]
+ },
+ {
+  "num": "11",
+  "title": "Characters",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Humans and revealed traitors are collectively referred to as characters."
+   }
+  ],
+  "related": [
+   "Skill Cards",
+   "Turn Structure",
+   "Player",
+   "Revealed Traitors"
+  ]
+ },
+ {
+  "num": "12",
+  "title": "Component Limitations",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "All components are limited to those provided in the game."
+   },
+   {
+    "type": "rule",
+    "text": "If a player is required to draw cards from a deck and there are not enough cards available in the deck, they draw as many cards as available (possibly even zero).",
+    "num": "12.1"
+   },
+   {
+    "type": "rule",
+    "text": "When Deep Ones are spawned, if there are not enough Deep Ones in the supply to spawn, the game ends.",
+    "num": "12.2"
+   }
+  ],
+  "related": [
+   "Ending the Game"
+  ]
+ },
+ {
+  "num": "13",
+  "title": "Damage",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "There are two ways in which damage can occur: damage to the ship and damage to a space."
+   },
+   {
+    "type": "rule",
+    "text": "[[DAMAGING THE SHIP:]] When a player is instructed to “damage the ship,” they draw the top card of the damage deck and resolve its effect.",
+    "num": "13.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If the damage card is titled Structural Damage, the player rolls the die and places that card in the interior space that matches the die result."
+   },
+   {
+    "type": "rule",
+    "text": "[[DAMAGING A SPACE:]] When a player is instructed to damage a specific space, they draw the top card of the damage deck and resolve its effect.",
+    "num": "13.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If the damage card is titled Structural Damage, the player places that card in the space being damaged."
+   },
+   {
+    "type": "bullet",
+    "text": "If the damage card removes itself from the game after resolving, the player does **not** draw an additional card."
+   },
+   {
+    "type": "rule",
+    "text": "Only interior spaces can be damaged; deck and water spaces cannot be damaged.",
+    "num": "13.3"
+   },
+   {
+    "type": "bullet",
+    "text": "The Brig and the Sick Bay are interior spaces but cannot be damaged."
+   },
+   {
+    "type": "rule",
+    "text": "While a space has a damage card in it, that space is damaged and players cannot use the action ability for that space.",
+    "num": "13.4"
+   },
+   {
+    "type": "rule",
+    "text": "A damaged space cannot be damaged again. If a damaged space would be damaged again, the closest undamaged interior space is damaged instead.",
+    "num": "13.5"
+   },
+   {
+    "type": "bullet",
+    "text": "If multiple damageable spaces are equidistant from the original space, the one with the highest number printed in it is damaged."
+   },
+   {
+    "type": "rule",
+    "text": "A human in a damaged space may repair that damage by performing the action ability of that damage card.",
+    "num": "13.6"
+   },
+   {
+    "type": "bullet",
+    "text": "When a space is repaired, the damage card in that space is shuffled back into the damage deck."
+   },
+   {
+    "type": "bullet",
+    "text": "Repairing a damaged space does not count against the once-per-turn limit for using the action ability for that space."
+   },
+   {
+    "type": "rule",
+    "text": "If there are six damaged spaces at the same time, the game ends.",
+    "num": "13.7"
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Activations",
+   "Ending the Game",
+   "Repair",
+   "Spaces"
+  ]
+ },
+ {
+  "num": "14",
+  "title": "Deep",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The Deep represents the depths of the ocean where the Deep Ones regroup in preparation for assaulting the ship."
+   },
+   {
+    "type": "rule",
+    "text": "If Mother Hydra or Father Dagon is removed from the board, that figure is placed in the Deep.",
+    "num": "14.1"
+   },
+   {
+    "type": "rule",
+    "text": "Any monsters in the two water spaces at the back of the ship are moved to the Deep when the token on the travel track advances.",
+    "num": "14.2"
+   },
+   {
+    "type": "rule",
+    "text": "The Deep is not considered a board space for any gameplay effects.",
+    "num": "14.3"
+   },
+   {
+    "type": "bullet",
+    "text": "The Deep is not adjacent to any board space."
+   }
+  ],
+  "related": [
+   "Activations",
+   "Spaces",
+   "Travel Track"
+  ]
+ },
+ {
+  "num": "15",
+  "title": "Deep One Movement Arrows",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Arrows printed on the board indicate the direction of movement for Deep Ones."
+   },
+   {
+    "type": "rule",
+    "text": "There is a movement arrow printed in each water and deck space.",
+    "num": "15.1"
+   },
+   {
+    "type": "rule",
+    "text": "There are no Deep One movement arrows between interior spaces as the rules for Deep One movement in interior spaces differ from these other spaces.",
+    "num": "15.2"
+   }
+  ],
+  "related": [
+   "Activations"
+  ]
+ },
+ {
+  "num": "16",
+  "title": "Defeated",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Characters, monsters, and passengers can all be defeated."
+   },
+   {
+    "type": "rule",
+    "text": "When an attack succeeds, the defender of that attack is defeated.",
+    "num": "16.1"
+   },
+   {
+    "type": "rule",
+    "text": "When a Deep One activates in a deck space with one or more passengers and there are no humans in that space, the current player chooses one of those passengers to be defeated.",
+    "num": "16.2"
+   },
+   {
+    "type": "rule",
+    "text": "When a human is defeated, they are moved to the Sick Bay.",
+    "num": "16.3"
+   },
+   {
+    "type": "bullet",
+    "text": "If a human in the Sick Bay is defeated, they remain in the Sick Bay."
+   },
+   {
+    "type": "bullet",
+    "text": "If a human in the Brig is defeated, they remain in the Brig."
+   },
+   {
+    "type": "rule",
+    "text": "When a revealed traitor is defeated, they are moved to the Brig.",
+    "num": "16.4"
+   },
+   {
+    "type": "bullet",
+    "text": "If a revealed traitor in the Brig is defeated, they remain in the Brig."
+   },
+   {
+    "type": "rule",
+    "text": "When a Deep One is defeated, it is returned to the supply.",
+    "num": "16.5"
+   },
+   {
+    "type": "rule",
+    "text": "When a passenger is defeated, it is flipped faceup, each resource dial is reduced by the number of icons on that passenger matching that dial’s resource, and then the passenger is removed from the game.",
+    "num": "16.6"
+   },
+   {
+    "type": "bullet",
+    "text": "The “X” token does not cause the loss of any resources when it is defeated."
+   },
+   {
+    "type": "rule",
+    "text": "If an ability prevents a defeat, all effects of that defeat are ignored.",
+    "num": "16.7"
+   }
+  ],
+  "related": [
+   "Activations",
+   "Attack",
+   "Brig",
+   "Monsters",
+   "Passengers",
+   "Sick Bay"
+  ]
+ },
+ {
+  "num": "17",
+  "title": "Dice",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "**Unfathomable** includes one standard eight-sided die."
+   },
+   {
+    "type": "rule",
+    "text": "Modifiers to a die roll cannot cause the result to be less than 1 or greater than 8. If the result would be less than 1, treat it as 1. If the result would be greater than 8, treat it as 8.",
+    "num": "17.1"
+   },
+   {
+    "type": "rule",
+    "text": "A die can be rerolled any number of times by game abilities.",
+    "num": "17.2"
+   },
+   {
+    "type": "bullet",
+    "text": "When a die is rerolled, any modifiers to the initial roll apply to the reroll."
+   },
+   {
+    "type": "bullet",
+    "text": "Abilities with a timing of “before a die is rolled” may be used when a reroll ability is triggered, before the die is rerolled."
+   },
+   {
+    "type": "bullet",
+    "text": "Any abilities that are “limit once per die roll” can only be used once regardless of the number of rerolls."
+   }
+  ],
+  "related": [
+   "Abilities"
+  ]
+ },
+ {
+  "num": "18",
+  "title": "Ending the Game",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The game ends immediately when any of the following conditions are met:"
+   },
+   {
+    "type": "bullet",
+    "text": "The token on the travel track advances to the Arrive space and there are already waypoint cards in play with a total distance of 12 or more."
+   },
+   {
+    "type": "bullet",
+    "text": "Any resource dial reaches 0."
+   },
+   {
+    "type": "bullet",
+    "text": "There are six damaged spaces at the same time."
+   },
+   {
+    "type": "bullet",
+    "text": "Players must spawn Deep Ones, but there are not enough Deep Ones remaining the supply to spawn."
+   },
+   {
+    "type": "rule",
+    "text": "When one of the end game conditions is met, each player reveals all of their loyalty cards.",
+    "num": "18.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If the game ended because the token on the travel track reached the Arrive space, all players who have only Human loyalty cards win the game."
+   },
+   {
+    "type": "bullet",
+    "text": "In all other cases, all players with at least one Hybrid loyalty card win the game"
+   },
+   {
+    "type": "sub",
+    "text": "If the total distance on all waypoint cards is 12 or greater, the player with the Cultist loyalty card also wins. This includes if the game ends while resolving the waypoint card that brings the total distance to 12."
+   },
+   {
+    "type": "sub",
+    "text": "If one player has both a Hybrid and a Cultist loyalty card, that player wins if players with a Hybrid card win the game, even if the total distance on waypoint cards is less than 12."
+   }
+  ],
+  "related": [
+   "Damage",
+   "Loyalty Cards",
+   "Object of the Game"
+  ]
+ },
+ {
+  "num": "19",
+  "title": "Enemies",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Enemies are defined according to the loyalty of the player."
+   },
+   {
+    "type": "rule",
+    "text": "[[HUMANS:]] Deep Ones and revealed traitors are enemies of human players.",
+    "num": "19.1"
+   },
+   {
+    "type": "rule",
+    "text": "[[REVEALED TRAITORS:]] Humans are enemies of revealed traitors.",
+    "num": "19.2"
+   }
+  ],
+  "related": [
+   "Revealed Traitors"
+  ]
+ },
+ {
+  "num": "20",
+  "title": "Feat Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Each character has a character-specific feat card that provides a powerful ability that can be used once per game."
+   },
+   {
+    "type": "rule",
+    "text": "A character’s feat card is identified by that character’s name on the front and the character’s image on the back.",
+    "num": "20.1"
+   },
+   {
+    "type": "rule",
+    "text": "Each character starts the game with their feat card in their play area.",
+    "num": "20.2"
+   },
+   {
+    "type": "rule",
+    "text": "Each feat card instructs the player to remove it from the game after use.",
+    "num": "20.3"
+   },
+   {
+    "type": "rule",
+    "text": "To use the ability on a feat card, a player reads its text and follows the instructions.",
+    "num": "20.4"
+   },
+   {
+    "type": "bullet",
+    "text": "If the feat card has an action ability, the player must perform an action to use that ability."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Remove from the Game"
+  ]
+ },
+ {
+  "num": "21",
+  "title": "Front of the Ship",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The front of the ship are the two water spaces numbered 1–4 and 5–8."
+   },
+   {
+    "type": "rule",
+    "text": "When a monarch moves as a part of their activation, they move one space toward the closest of these numbered water spaces.",
+    "num": "21.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If a monarch is already in one of the numbered water spaces when they activate, they do not move."
+   }
+  ],
+  "related": [
+   "Back of the Ship",
+   "Spaces"
+  ]
+ },
+ {
+  "num": "22",
+  "title": "Hand Limit",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Hand limit refers to the maximum number of skill cards a player can have in their hand at the end of the Discard step."
+   },
+   {
+    "type": "rule",
+    "text": "Each player’s hand limit is 10.",
+    "num": "22.1"
+   },
+   {
+    "type": "rule",
+    "text": "During each player’s Discard step, **all** players who have more than 10 skill cards in hand must choose and discard skill cards until they have 10 skill cards in hand.",
+    "num": "22.2"
+   }
+  ],
+  "related": [
+   "Skill Cards",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "23",
+  "title": "Humans",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A human is any player who is not a revealed traitor, even if that player has one or more unrevealed Hybrid or Cultist loyalty cards."
+   },
+   {
+    "type": "rule",
+    "text": "Passengers are not considered humans for gameplay purposes.",
+    "num": "23.1"
+   }
+  ],
+  "related": [
+   "Loyalty Cards",
+   "Reveal as a Traitor",
+   "Revealed Traitors",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "24",
+  "title": "Item Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Item cards provide unique abilities to the player who has the card in their play area."
+   },
+   {
+    "type": "rule",
+    "text": "When a player is instructed to draw an item card, they draw the top card of the item deck and place it faceup in their play area.",
+    "num": "24.1"
+   },
+   {
+    "type": "rule",
+    "text": "There is no item discard pile. When an item leaves play, it is removed from the game.",
+    "num": "24.2"
+   },
+   {
+    "type": "rule",
+    "text": "To use the ability on an item card, a player reads its text and follows the instructions.",
+    "num": "24.3"
+   },
+   {
+    "type": "bullet",
+    "text": "If the item card has an action ability, the player must perform an action to use that ability."
+   },
+   {
+    "type": "rule",
+    "text": "While there are no cards in the item deck, players may not draw item cards.",
+    "num": "24.4"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player uses the action ability for the Cargo Hold and there is only one card in the item deck, that player looks at that card and may choose to keep it or return it to the item deck."
+   },
+   {
+    "type": "rule",
+    "text": "Item cards have traits shown in a banner beneath their picture.",
+    "num": "24.5"
+   },
+   {
+    "type": "bullet",
+    "text": "Traits have no inherent gameplay effect but can be referenced by other abilities."
+   },
+   {
+    "type": "h",
+    "text": "Improvements",
+    "num": "24.6"
+   },
+   {
+    "type": "p",
+    "text": "Items with the Improvement keyword have a skill banner at the bottom."
+   },
+   {
+    "type": "rule",
+    "text": "Each player can only have one Improvement item active at a time.",
+    "num": "24.7"
+   },
+   {
+    "type": "bullet",
+    "text": "An Improvement item is active if it is faceup."
+   },
+   {
+    "type": "bullet",
+    "text": "A facedown Improvement item is inactive."
+   },
+   {
+    "type": "sub",
+    "text": "An inactive Improvement item is considered an item in the player’s play area for all gameplay purposes."
+   },
+   {
+    "type": "sub",
+    "text": "Players can trade or discard inactive Improvement items like any other item."
+   },
+   {
+    "type": "rule",
+    "text": "A player can change their active Improvement item at the start of their turn or any time they gain or lose an Improvement item.",
+    "num": "24.8"
+   },
+   {
+    "type": "bullet",
+    "text": "Gaining an improvement includes drawing one from the item deck or receiving one from another player, either through a trade or another game effect."
+   },
+   {
+    "type": "bullet",
+    "text": "Losing an improvement includes when one leaves a player’s play area due to a trade or another game effect."
+   },
+   {
+    "type": "rule",
+    "text": "To change a player’s active Improvement, that player chooses one of their Improvement items to flip faceup and then flips all of their other Improvement items facedown.",
+    "num": "24.9"
+   },
+   {
+    "type": "rule",
+    "text": "While a player has an active Improvement item, the skill shown on that item is added to that player’s skill set.",
+    "num": "24.10"
+   },
+   {
+    "type": "bullet",
+    "text": "When a player changes their active Improvement item at the start of their turn, this occurs before the player’s Receive Skills step. As such, the player’s skill set changes before they draw skill cards."
+   },
+   {
+    "type": "bullet",
+    "text": "While a player is in the Brig, their active Improvement item is not added to their skill set."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Skill Set"
+  ]
+ },
+ {
+  "num": "25",
+  "title": "Loyalty Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A player’s loyalty cards determine whether that player is loyal to the humans or the Deep Ones. There are three types of loyalty cards: Human, Hybrid, and Cultist."
+   },
+   {
+    "type": "rule",
+    "text": "Each player is dealt one loyalty card during setup and a second loyalty card during the awakening phase.",
+    "num": "25.1"
+   },
+   {
+    "type": "rule",
+    "text": "If a player has only Human loyalty cards, that player is loyal to the humans and wins the game if the human objective is met.",
+    "num": "25.2"
+   },
+   {
+    "type": "rule",
+    "text": "If a player has one or more Hybrid loyalty cards, that player is a traitor, is loyal to the Deep Ones, and wins if any of the Deep One objectives are met, even if that player also has one or more Human loyalty cards.",
+    "num": "25.3"
+   },
+   {
+    "type": "rule",
+    "text": "If a player has the Cultist loyalty card, that player is a traitor, is loyal to the Deep Ones, and wins if any of the Deep One objectives are met **and** the total distance on all waypoint cards in play is 12 or greater, even if that player also has one or more Human loyalty cards.",
+    "num": "25.4"
+   },
+   {
+    "type": "rule",
+    "text": "If a player has both a Hybrid and a Cultist card, that player uses the win condition on the Hybrid card.",
+    "num": "25.5"
+   },
+   {
+    "type": "rule",
+    "text": "A player who is not a revealed traitor is a human, even if that player has one or more unrevealed Hybrid or Cultist loyalty cards.",
+    "num": "25.6"
+   },
+   {
+    "type": "rule",
+    "text": "Players can look at their own loyalty cards at any time.",
+    "num": "25.7"
+   }
+  ],
+  "related": [
+   "Object of the Game",
+   "Reveal as a Traitor",
+   "Revealed Traitors",
+   "Skill Cards",
+   "Traitors",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "26",
+  "title": "Monarchs",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Mother Hydra and Father Dagon are monarchs."
+   },
+   {
+    "type": "rule",
+    "text": "Monarchs cannot be attacked.",
+    "num": "26.1"
+   },
+   {
+    "type": "rule",
+    "text": "Monarchs are not considered Deep Ones for gameplay purposes.",
+    "num": "26.2"
+   }
+  ],
+  "related": [
+   "Activations",
+   "Monsters"
+  ]
+ },
+ {
+  "num": "27",
+  "title": "Monsters",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Mother Hydra, Father Dagon, and Deep Ones are collectively referred to as monsters."
+   }
+  ],
+  "related": [
+   "Activations",
+   "Monarchs"
+  ]
+ },
+ {
+  "num": "28",
+  "title": "Mythos Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Mythos cards have three primary parts that are resolved in this order:"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—Crisis",
+    "num": "28.1"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—Activation icon",
+    "num": "28.2"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—Track icon",
+    "num": "28.3"
+   },
+   {
+    "type": "rule",
+    "text": "When a player draws a mythos card, it is revealed to all players. The card is resolved and then discarded.",
+    "num": "28.4"
+   },
+   {
+    "type": "bullet",
+    "text": "All parts of a mythos card that is being resolved are open information and any player who wishes to view the card can do so."
+   },
+   {
+    "type": "bullet",
+    "text": "If the crisis is a choice for a player other than the player who drew it, the player who drew the card gives the card to the player who is instructed to make the choice before the card is resolved."
+   },
+   {
+    "type": "bullet",
+    "text": "Green mythos cards are character-specific mythos cards."
+   },
+   {
+    "type": "sub",
+    "text": "Character-specific mythos cards present a choice for the player playing the character specified on the card."
+   },
+   {
+    "type": "sub",
+    "text": "Any time a character-specific mythos card is drawn and that character is not being used in the game, is in the Brig, or is a revealed traitor, that card is discarded and a new one is drawn."
+   },
+   {
+    "type": "sub",
+    "text": "If an ability allows a player to look at one or more mythos cards in secret and one or more of those cards are character-specific mythos cards that would be discarded according to the criteria above, the player reveals those cards, discards them, and then looks at additional cards equal to the number discarded. Repeat this process if any of the new cards being looked at would also be discarded."
+   },
+   {
+    "type": "rule",
+    "text": "The mythos deck has its own faceup discard pile.",
+    "num": "28.5"
+   },
+   {
+    "type": "rule",
+    "text": "When the last card in the mythos deck is drawn, after that card is resolved, shuffle the mythos discard pile to create a new mythos deck.",
+    "num": "28.6"
+   },
+   {
+    "type": "h",
+    "text": "Crisis",
+    "num": "28.7"
+   },
+   {
+    "type": "p",
+    "text": "Mythos cards present the players with a crisis that must be resolved."
+   },
+   {
+    "type": "rule",
+    "text": "When resolving a crisis, the current player reads the story text aloud to the group to set the scene for the crisis.",
+    "num": "28.8"
+   },
+   {
+    "type": "rule",
+    "text": "All instructions for a crisis are performed by the player resolving that crisis. When a crisis uses the word “you” or “your,” it refers to the player resolving the crisis.",
+    "num": "28.9"
+   },
+   {
+    "type": "bullet",
+    "text": "Choice crises are resolved by the player making the choice on the card. All other crises are resolved by the current player."
+   },
+   {
+    "type": "rule",
+    "text": "There are three types of crises: choices, skill checks, and combinations of the previous two.",
+    "num": "28.10"
+   },
+   {
+    "type": "h3",
+    "text": "Choice Crises",
+    "num": "28.11"
+   },
+   {
+    "type": "p",
+    "text": "These crises present a player with a choice of two outcomes."
+   },
+   {
+    "type": "rule",
+    "text": "A choice crisis specifies a player to make the choice. The specified player can be one of the following:",
+    "num": "28.12"
+   },
+   {
+    "type": "bullet",
+    "text": "Current Player"
+   },
+   {
+    "type": "bullet",
+    "text": "Captain (the player with the Captain title)"
+   },
+   {
+    "type": "bullet",
+    "text": "Keeper of the Tome (the player with the Keeper of the Tome title)"
+   },
+   {
+    "type": "bullet",
+    "text": "The name of a character (this makes the crisis a character-specific crisis)"
+   },
+   {
+    "type": "rule",
+    "text": "The player making the choice reads each option aloud before making the choice.",
+    "num": "28.13"
+   },
+   {
+    "type": "bullet",
+    "text": "A player can choose either option on a choice crisis, even if that option cannot be completely resolved, unless the choice states otherwise."
+   },
+   {
+    "type": "h3",
+    "text": "Skill Check Crises",
+    "num": "28.14"
+   },
+   {
+    "type": "p",
+    "text": "These crises initiate a skill check."
+   },
+   {
+    "type": "rule",
+    "text": "Skill checks are presented as a target number and two or more skill icons.",
+    "num": "28.15"
+   },
+   {
+    "type": "bullet",
+    "text": "The skill icons shown are the supporting skills for that skill check."
+   },
+   {
+    "type": "bullet",
+    "text": "Each skill whose icon is not shown is an opposing skill for that skill check."
+   },
+   {
+    "type": "rule",
+    "text": "The crisis lists the effects of passing or failing the skill check.",
+    "num": "28.16"
+   },
+   {
+    "type": "rule",
+    "text": "Some crises have a partial pass that is presented as a number followed by an effect.",
+    "num": "28.17"
+   },
+   {
+    "type": "bullet",
+    "text": "If the skill check total does not equal or exceed the target number but equals or exceeds the number listed for the partial pass, resolve the effect for the partial pass."
+   },
+   {
+    "type": "bullet",
+    "text": "A skill check that achieves a partial pass is not considered to have passed or failed for the purposes of other game effects."
+   },
+   {
+    "type": "h3",
+    "text": "Combination Crises",
+    "num": "28.18"
+   },
+   {
+    "type": "p",
+    "text": "Some crises contain a combination of a choice and a skill check. For these cards, the indicated player first chooses whether to resolve the skill check or the second option on the card."
+   },
+   {
+    "type": "rule",
+    "text": "If the second option is chosen, the skill check is not resolved.",
+    "num": "28.19"
+   },
+   {
+    "type": "rule",
+    "text": "The player reads both options aloud before making their choice.",
+    "num": "28.20"
+   },
+   {
+    "type": "h",
+    "text": "Activation Icon",
+    "num": "28.21"
+   },
+   {
+    "type": "p",
+    "text": "Each mythos card has one of three activation icons in the lower-right corner."
+   },
+   {
+    "type": "rule",
+    "text": "The activation icon on a mythos card is resolved after that card’s crisis is resolved.",
+    "num": "28.22"
+   },
+   {
+    "type": "rule",
+    "text": "Some crises show one or more activation icons in their effects. When those effects are resolved, the players resolve the listed activations in the order shown (left to right).",
+    "num": "28.23"
+   },
+   {
+    "type": "rule",
+    "text": "When an activation icon is resolved, one or more monsters activate depending on the icon:",
+    "num": "28.24"
+   },
+   {
+    "type": "bullet",
+    "text": "[[DEEP ONE ACTIVATION]] ({deep-ones}): Each Deep One on the board performs an activation."
+   },
+   {
+    "type": "bullet",
+    "text": "[[FATHER DAGON ACTIVATION]] ({father-dagon}): Father Dagon performs an activation."
+   },
+   {
+    "type": "bullet",
+    "text": "[[MOTHER HYDRA ACTIVATION]] ({mother-hydra}): Mother Hydra performs an activation."
+   },
+   {
+    "type": "h",
+    "text": "Track Icon",
+    "num": "28.25"
+   },
+   {
+    "type": "p",
+    "text": "Each mythos card has one of three track icons in the lower-right corner."
+   },
+   {
+    "type": "rule",
+    "text": "The track icon on a mythos card is resolved after that card’s activation icon is resolved.",
+    "num": "28.26"
+   },
+   {
+    "type": "rule",
+    "text": "When a track icon is resolved, the token on one track advances depending on the icon:",
+    "num": "28.27"
+   },
+   {
+    "type": "bullet",
+    "text": "[[TRAVEL TRACK]] ({track-travel}): Advance the token on the travel track one space."
+   },
+   {
+    "type": "bullet",
+    "text": "[[RITUAL TRACK]] ({track-ritual}): Advance the token on the ritual track one space."
+   },
+   {
+    "type": "bullet",
+    "text": "[[CHOICE OF TRACKS]] ({track-choice}): The current player chooses one track and advances the token on that track one space."
+   },
+   {
+    "type": "sub",
+    "text": "If the current player is in the Brig when resolving this icon, the player with the Captain title chooses the track instead."
+   }
+  ],
+  "related": [
+   "Activations",
+   "Deep",
+   "Front of the Ship",
+   "Open Information",
+   "Skill Checks",
+   "Tracks",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "29",
+  "title": "Object of the Game",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Each player in **Unfathomable** is assigned a loyalty to one of two groups: the humans or the Deep Ones. A player’s loyalty is determined by one or more loyalty cards dealt to the player. The object of the game for each player is determined by which group the player is loyal to."
+   },
+   {
+    "type": "rule",
+    "text": "Players loyal to the humans are fighting for survival and seeking to ensure the SS *Atlantica* reaches its destination.",
+    "num": "29.1"
+   },
+   {
+    "type": "rule",
+    "text": "Players loyal to the Deep Ones are seeking to sink the SS *Atlantica* for their own nefarious purposes.",
+    "num": "29.2"
+   },
+   {
+    "type": "h",
+    "text": "Human Objective",
+    "num": "29.3"
+   },
+   {
+    "type": "p",
+    "text": "The objective for players loyal to the humans is to travel a total of 12 or more distance on waypoint cards and then advance the travel track to the Arrive space one additional time."
+   },
+   {
+    "type": "rule",
+    "text": "A player who has only human loyalty cards is loyal to the humans.",
+    "num": "29.4"
+   },
+   {
+    "type": "h",
+    "text": "Deep One Objectives",
+    "num": "29.5"
+   },
+   {
+    "type": "p",
+    "text": "Players loyal to the Deep Ones have several ways of winning. They win the game immediately if any of the following are true:"
+   },
+   {
+    "type": "rule",
+    "text": "[[OBJECTIVE 1]]—Any resource dial reaches 0.",
+    "num": "29.6"
+   },
+   {
+    "type": "rule",
+    "text": "[[OBJECTIVE 2]]—There are six damaged spaces at the same time.",
+    "num": "29.7"
+   },
+   {
+    "type": "rule",
+    "text": "[[OBJECTIVE 3]]—Players must spawn Deep Ones, but there are not enough Deep Ones remaining in the supply to spawn.",
+    "num": "29.8"
+   },
+   {
+    "type": "rule",
+    "text": "A player who has at least one Hybrid or Cultist loyalty card is loyal to the Deep Ones.",
+    "num": "29.9"
+   },
+   {
+    "type": "bullet",
+    "text": "The player with the Cultist loyalty card has an additional requirement for winning. (See below.)"
+   },
+   {
+    "type": "h3",
+    "text": "Cultist Objectives",
+    "num": "29.10"
+   },
+   {
+    "type": "p",
+    "text": "The cultist (the player with the Cultist loyalty card, used only in four- and six-player games) is a human character who wishes to help the Deep Ones succeed in their machinations. Because the cultist is not a Deep One, they want the Deep Ones to succeed in sinking the SS *Atlantica* only after it is within sight of land."
+   },
+   {
+    "type": "rule",
+    "text": "The cultist wins the game (along with any players who have a Hybrid loyalty card) if one of the Deep One objectives has been met **and** the ship has traveled a total of 12 or more distance on waypoint cards.",
+    "num": "29.11"
+   },
+   {
+    "type": "rule",
+    "text": "The cultist loses if the human objective is met, or one of the Deep One objectives is met before 12 distance has been traveled.",
+    "num": "29.12"
+   },
+   {
+    "type": "rule",
+    "text": "If a player has both a Cultist and a Hybrid loyalty card at the end of the game, that player wins the game if one of the Deep One objectives is met, regardless of how far the ship has traveled.",
+    "num": "29.13"
+   }
+  ],
+  "related": [
+   "Damage",
+   "Ending the Game",
+   "Loyalty Cards",
+   "Resources",
+   "Spawn",
+   "Tracks"
+  ]
+ },
+ {
+  "num": "30",
+  "title": "Open Information",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Open information refers to any information that is available to all players. The following information is open information:"
+   },
+   {
+    "type": "rule",
+    "text": "The number of cards in each facedown deck.",
+    "num": "30.1"
+   },
+   {
+    "type": "rule",
+    "text": "The top card of each discard pile.",
+    "num": "30.2"
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot count the number of cards in a discard pile."
+   },
+   {
+    "type": "rule",
+    "text": "The number of Deep Ones and passengers in the supply.",
+    "num": "30.3"
+   },
+   {
+    "type": "rule",
+    "text": "All faceup components in each player’s play area.",
+    "num": "30.4"
+   },
+   {
+    "type": "rule",
+    "text": "The number of loyalty cards in each player’s play area.",
+    "num": "30.5"
+   },
+   {
+    "type": "rule",
+    "text": "The number of skill cards in each player’s hand.",
+    "num": "30.6"
+   },
+   {
+    "type": "rule",
+    "text": "The number of skill cards each player adds to a skill check.",
+    "num": "30.7"
+   },
+   {
+    "type": "rule",
+    "text": "The number of skill cards currently added to a skill check.",
+    "num": "30.8"
+   }
+  ],
+  "related": []
+ },
+ {
+  "num": "31",
+  "title": "Opposing Skills",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "An opposing skill for a skill check is any skill type that is not included in the supporting skills list for the skill check."
+   },
+   {
+    "type": "rule",
+    "text": "Opposing skill cards count negatively toward the skill check.",
+    "num": "31.1"
+   }
+  ],
+  "related": [
+   "Skill Checks",
+   "Supporting Skills"
+  ]
+ },
+ {
+  "num": "32",
+  "title": "Passengers",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Passengers are represented by tokens and are non-player passengers and crew members aboard the SS *Atlantica* who may be put in danger over the course of the game."
+   },
+   {
+    "type": "rule",
+    "text": "Passenger tokens have identical back sides with a variety of faces.",
+    "num": "32.1"
+   },
+   {
+    "type": "bullet",
+    "text": "The face of a passenger token has one or more resource icons or an “X.”"
+   },
+   {
+    "type": "sub",
+    "text": "Passenger tokens with an “X” do not result in the loss of any resources when defeated."
+   },
+   {
+    "type": "rule",
+    "text": "Passenger tokens should always be facedown unless a game effect causes a token to be flipped faceup.",
+    "num": "32.2"
+   },
+   {
+    "type": "rule",
+    "text": "Passengers are not considered humans for gameplay purposes.",
+    "num": "32.3"
+   },
+   {
+    "type": "h",
+    "text": "Risk a Passenger",
+    "num": "32.4"
+   },
+   {
+    "type": "p",
+    "text": "When a player is instructed to “risk a passenger,” that player rolls the die and places one passenger token from the supply facedown (without looking at its face) in the deck space that matches the die result."
+   },
+   {
+    "type": "rule",
+    "text": "If the players are required to risk more passengers than there are in the supply, they must risk as many passengers as possible.",
+    "num": "32.5"
+   },
+   {
+    "type": "rule",
+    "text": "If an ability requires the risking of passengers as a cost (e.g., the action ability for the Bridge) and there are not enough passengers in the supply to be risked, that ability cannot be used.",
+    "num": "32.6"
+   },
+   {
+    "type": "h",
+    "text": "Rescue a Passenger",
+    "num": "32.7"
+   },
+   {
+    "type": "p",
+    "text": "When a player rescues a passenger, that player takes that passenger token and moves it facedown to the supply (without looking at it)."
+   },
+   {
+    "type": "h",
+    "text": "Defeat a Passenger",
+    "num": "32.8"
+   },
+   {
+    "type": "p",
+    "text": "When a passenger is defeated, it is flipped faceup and each resource dial is reduced by the number of icons on the revealed token that match that resource. Then that passenger token is removed from the game."
+   },
+   {
+    "type": "rule",
+    "text": "Passengers can be defeated by a Deep One that activates in their space or as an action by a revealed traitor in their space.",
+    "num": "32.9"
+   },
+   {
+    "type": "bullet",
+    "text": "Passengers cannot be defeated by a Deep One or revealed traitor while there is a human in their space."
+   },
+   {
+    "type": "rule",
+    "text": "The passenger with an “X” on its face does not cause the loss of any resources when it is defeated.",
+    "num": "32.10"
+   },
+   {
+    "type": "rule",
+    "text": "If the defeat of a passenger results in a resource being reduced to 0, the game ends.",
+    "num": "32.11"
+   }
+  ],
+  "related": [
+   "Defeated",
+   "Ending the Game",
+   "Object of the Game"
+  ]
+ },
+ {
+  "num": "33",
+  "title": "Player",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "When playing **Unfathomable**, each player controls a character. Throughout both rulebooks, the word “player” refers to both a person playing the game as well as the character that person controls."
+   }
+  ],
+  "related": [
+   "Characters"
+  ]
+ },
+ {
+  "num": "34",
+  "title": "Remove from the Game",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "When a component is removed from the game, return it to the game box. Players cannot look at components after they have been removed from the game unless a game effect allows it."
+   }
+  ],
+  "related": []
+ },
+ {
+  "num": "35",
+  "title": "Repair",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Damaged spaces can be repaired."
+   },
+   {
+    "type": "rule",
+    "text": "To repair a damaged space, a player performs the action ability of the damage card in their space.",
+    "num": "35.1"
+   },
+   {
+    "type": "sub",
+    "text": "Repairing a space does not count against the once-per-turn limit on using an interior space’s action ability."
+   },
+   {
+    "type": "rule",
+    "text": "When a space is repaired, the damage card in that space is shuffled back into the damage deck.",
+    "num": "35.2"
+   },
+   {
+    "type": "rule",
+    "text": "A damaged space with a Deep One or revealed traitor in it cannot be repaired.",
+    "num": "35.3"
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Damage",
+   "Spaces"
+  ]
+ },
+ {
+  "num": "36",
+  "title": "Resources",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "There are four resources in the game: fuel ({fuel}), food ({food}), sanity ({sanity}), and souls ({souls})."
+   },
+   {
+    "type": "rule",
+    "text": "When a resource is gained or lost, its dial is adjusted to reflect its current total.",
+    "num": "36.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If any resource is reduced to 0, the game ends."
+   },
+   {
+    "type": "bullet",
+    "text": "Each resource cannot be increased above 10. Any gains beyond 10 are ignored."
+   }
+  ],
+  "related": [
+   "Ending the Game",
+   "Object of the Game"
+  ]
+ },
+ {
+  "num": "37",
+  "title": "Reveal Ability",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Every character sheet has a reveal ability located in the lower-right corner of the character sheet. This ability is resolved when that character reveals as a traitor."
+   }
+  ],
+  "related": [
+   "Loyalty Cards",
+   "Reveal as a Traitor",
+   "Revealed Traitors"
+  ]
+ },
+ {
+  "num": "38",
+  "title": "Reveal as a Traitor",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A human with a Hybrid or Cultist loyalty card may reveal as a traitor as an action."
+   },
+   {
+    "type": "p",
+    "text": "To reveal as a traitor, a player performs the following steps:"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—The player reveals one (and only one) of their Hybrid or Cultist loyalty cards.",
+    "num": "38.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If the player has both a Hybrid and a Cultist loyalty card, they choose which one to reveal."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—The player resolves the “When you reveal as a traitor” ability on their character sheet. Then, they place the revealed loyalty card faceup on top of the abilities on their character sheet. They cannot use those abilities for the remainder of the game.",
+    "num": "38.2"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—If the ship has not yet traveled 12 distance, the player gives each of their unrevealed loyalty cards to one other player. That player adds these cards to their own loyalty cards and may look at them at any time. If the ship has traveled 12 or more distance, the revealing player keeps their unrevealed loyalty cards facedown in their play area.",
+    "num": "38.3"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 4]]—The player loses all titles.",
+    "num": "38.4"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 5]]—The player discards any mythos cards in their play area and removes their feat card from the game, if able.",
+    "num": "38.5"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 6]]—**If the player is not in the Brig**, they may discard any number of skill cards from their hand to draw an equal number of cards from the treachery skill deck.",
+    "num": "38.6"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 7]]—The player adds a revealed traitor ring to their character’s standee.",
+    "num": "38.7"
+   },
+   {
+    "type": "rule",
+    "text": "After these steps are completed, the current turn resumes.",
+    "num": "38.8"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player reveals during their own turn, they can still perform any actions they have remaining, but they skip their Mythos step."
+   }
+  ],
+  "related": [
+   "Loyalty Cards",
+   "Reveal Ability",
+   "Revealed Traitors",
+   "Titles",
+   "Travel Track"
+  ]
+ },
+ {
+  "num": "39",
+  "title": "Revealed Traitors",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A revealed traitor is a player who has a revealed Hybrid or Cultist loyalty card."
+   },
+   {
+    "type": "rule",
+    "text": "To become a revealed traitor, a player must perform the “reveal as a traitor” action.",
+    "num": "39.1"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor follows a different turn structure than a human player. See “53 Turn Structure” on page 17.",
+    "num": "39.2"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor can attack and be attacked by humans.",
+    "num": "39.3"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor can draw and use the abilities on treachery cards.",
+    "num": "39.4"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor prevents humans from using the action ability for the revealed traitor’s space as well as the action ability on any damage card in that space.",
+    "num": "39.5"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor cannot add more than one skill card to any single skill check.",
+    "num": "39.6"
+   },
+   {
+    "type": "rule",
+    "text": "A revealed traitor cannot use the abilities on their character sheet and in ship spaces.",
+    "num": "39.7"
+   }
+  ],
+  "related": [
+   "Loyalty Cards",
+   "Reveal Ability",
+   "Reveal as a Traitor",
+   "Treachery Cards",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "40",
+  "title": "Sick Bay",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The Sick Bay is where humans move when they are defeated."
+   },
+   {
+    "type": "rule",
+    "text": "When a player is in the Sick Bay during their Receive Skills step, they only draw one card of their choice from within their skill set.",
+    "num": "40.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player in the Sick Bay has an active Improvement item, they still only draw one skill card during their Receive Skills step, but they may draw that card from the skill type provided by the Improvement item."
+   },
+   {
+    "type": "rule",
+    "text": "Players can move out of the Sick Bay like most other spaces by performing a move action.",
+    "num": "40.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player moves out of the Sick Bay before their turn begins (such as when they are given an action on another player’s turn), that player draws their complete set of skill cards during their Receive Skills step."
+   },
+   {
+    "type": "rule",
+    "text": "If a player in the Sick Bay is defeated, they remain in the Sick Bay.",
+    "num": "40.3"
+   },
+   {
+    "type": "rule",
+    "text": "Players cannot voluntarily move to the Sick Bay.",
+    "num": "40.4"
+   },
+   {
+    "type": "rule",
+    "text": "The Sick Bay cannot be damaged.",
+    "num": "40.5"
+   },
+   {
+    "type": "rule",
+    "text": "Deep Ones cannot spawn in or move to the Sick Bay.",
+    "num": "40.6"
+   }
+  ],
+  "related": [
+   "Defeated",
+   "Item Cards",
+   "Skill Set",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "41",
+  "title": "Skill Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Skill cards provide players with abilities to use and can be used to support or oppose skill checks."
+   },
+   {
+    "type": "rule",
+    "text": "Each skill card has a skill type, a value, and an ability.",
+    "num": "41.1"
+   },
+   {
+    "type": "rule",
+    "text": "There are six types of skill cards: influence ({influence}), lore ({lore}), observation ({observation}), strength ({strength}), will ({will}), and treachery ({treachery}).",
+    "num": "41.2"
+   },
+   {
+    "type": "bullet",
+    "text": "Each skill type has its own skill deck and faceup discard pile."
+   },
+   {
+    "type": "bullet",
+    "text": "When the last card is drawn from a skill deck, that deck’s discard pile is shuffled to form a new deck."
+   },
+   {
+    "type": "sub",
+    "text": "If there are no cards in both a skill deck and its discard pile, players cannot draw cards of that skill type."
+   },
+   {
+    "type": "sub",
+    "text": "If there are no cards in both a skill deck and its discard pile, that deck remains empty until there is at least one card in that deck’s discard pile **and** a player needs to draw a card from that deck. At that time, shuffle the discard pile to create a new deck."
+   },
+   {
+    "type": "bullet",
+    "text": "Only revealed traitors can draw and use abilities on treachery skill cards."
+   },
+   {
+    "type": "rule",
+    "text": "Each player has a hand of skill cards.",
+    "num": "41.3"
+   },
+   {
+    "type": "bullet",
+    "text": "When a player draws a skill card, they add that card to their hand of skill cards."
+   },
+   {
+    "type": "sub",
+    "text": "When a player has a choice of drawing cards from multiple skill decks, they must decide how many cards to draw from each deck before drawing any cards."
+   },
+   {
+    "type": "bullet",
+    "text": "Skill cards are the only type of cards players keep in their hand."
+   },
+   {
+    "type": "bullet",
+    "text": "The number of cards in each player’s hand is open information. A player can ask another player how many skill cards they have in their hand at any time."
+   },
+   {
+    "type": "bullet",
+    "text": "Each player has a hand limit of 10 skill cards."
+   },
+   {
+    "type": "sub",
+    "text": "During the Discard step of each player’s turn, each player with more than 10 skill cards in hand must discard cards until they have 10 skill cards in hand."
+   },
+   {
+    "type": "rule",
+    "text": "To use the ability on a skill card, a player reveals the card from their hand, reads its text and follows the instructions.",
+    "num": "41.4"
+   },
+   {
+    "type": "bullet",
+    "text": "Players can play skill cards on any player’s turn."
+   },
+   {
+    "type": "bullet",
+    "text": "If a skill card has an action ability, the player must perform an action to use that ability."
+   },
+   {
+    "type": "bullet",
+    "text": "After the ability on a skill card resolves, that skill card is placed in the discard pile for that card’s skill type."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Chaos Deck",
+   "Open Information",
+   "Revealed Traitors",
+   "Skill Checks"
+  ]
+ },
+ {
+  "num": "42",
+  "title": "Skill Checks",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Skill checks can be initiated by crises and the action abilities of the Captain’s Cabin and Brig spaces."
+   },
+   {
+    "type": "rule",
+    "text": "Each skill check has a target number and two or more skill icons that indicate the supporting skills for that check. Each skill type not shown is an opposing skill.",
+    "num": "42.1"
+   },
+   {
+    "type": "rule",
+    "text": "To resolve a skill check, players follow these steps:",
+    "num": "42.2"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—[[ANNOUNCE CRITERIA:]] The current player announces the target number and the supporting skills.",
+    "num": "42.3"
+   },
+   {
+    "type": "bullet",
+    "text": "Any player who wishes to use a “before any cards are added to a skill check” ability does so during this step."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—[[ADD CHAOS CARDS:]] The current player creates the skill check pile by taking the top two cards from the chaos deck and places them facedown within reach of all players.",
+    "num": "42.4"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—[[ADD SKILL CARDS:]] Starting with the player to the left of the current player and ending with the current player, each player has **one** opportunity to add one or more skill cards to the skill check by taking those cards from their hand and placing them facedown on the skill check pile.",
+    "num": "42.5"
+   },
+   {
+    "type": "bullet",
+    "text": "A player is not required to contribute any skill cards to the check."
+   },
+   {
+    "type": "bullet",
+    "text": "Humans in the Brig and revealed traitors are only allowed to add up to one skill card to each skill check."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 4]]—[[SHUFFLE CARDS:]] The current player shuffles the skill check pile to ensure players do not know which cards each player contributed to the skill check.",
+    "num": "42.6"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 5]]—[[SORT CARDS:]] The current player flips the cards in the skill check pile faceup one at a time, placing it in one of two piles: one for supporting skills and one for opposing skills.",
+    "num": "42.7"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 6]]—[[CALCULATE TOTAL:]] The current player adds the value of all supporting skill cards and subtracts from it the total value of all opposing skill cards.",
+    "num": "42.8"
+   },
+   {
+    "type": "bullet",
+    "text": "If the final total is greater than or equal to the target number, the skill check passes."
+   },
+   {
+    "type": "sub",
+    "text": "Resolve any “Pass:” or “If the check passes” effect for the check."
+   },
+   {
+    "type": "bullet",
+    "text": "Some crises have a partial pass that is presented as a number followed by an effect."
+   },
+   {
+    "type": "sub",
+    "text": "If the skill check total does not equal or exceed the target number but equals or exceeds the number listed for the partial pass, resolve the effect for the partial pass."
+   },
+   {
+    "type": "sub",
+    "text": "A skill check that achieves a partial pass is not considered to have passed or failed for the purposes of other game effects."
+   },
+   {
+    "type": "bullet",
+    "text": "If the final total is less than the target number and any partial pass number, the skill check fails."
+   },
+   {
+    "type": "sub",
+    "text": "Resolve any “Fail:” effect for the check."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 7]]—[[DISCARD CARDS:]] All of the skill cards used in the skill check are discarded to the appropriate skill card discard piles.",
+    "num": "42.9"
+   }
+  ],
+  "related": [
+   "Chaos Deck",
+   "Mythos Cards",
+   "Opposing Skills",
+   "Supporting Skills",
+   "Target Number"
+  ]
+ },
+ {
+  "num": "43",
+  "title": "Skill Set",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A character’s skill set consists of the types and quantities of skill cards listed on that character’s sheet."
+   },
+   {
+    "type": "rule",
+    "text": "A player draws the types and quantities of skill cards in their character’s skill set during their Receive Skills step.",
+    "num": "43.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player is in Sick Bay during their Receive Skills step, they draw only one card of their choice from their skill set."
+   },
+   {
+    "type": "rule",
+    "text": "Each improvement item adds one card of a specific skill type to a player’s skill set.",
+    "num": "43.2"
+   }
+  ],
+  "related": [
+   "Item Cards",
+   "Skill Cards",
+   "Turn Structure"
+  ]
+ },
+ {
+  "num": "44",
+  "title": "Spaces",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "There are two types of spaces: ship spaces and water spaces. Ship spaces are subdivided into deck spaces and interior spaces."
+   },
+   {
+    "type": "rule",
+    "text": "Many rules and game effects refer to the “closest” space. The closest space is the space that is the fewest number of spaces away from the reference space or component.",
+    "num": "44.1"
+   },
+   {
+    "type": "h",
+    "text": "Water Spaces",
+    "num": "44.2"
+   },
+   {
+    "type": "p",
+    "text": "There are eight water spaces that surround the ship and visually represent the ocean."
+   },
+   {
+    "type": "rule",
+    "text": "The two spaces numbered 1–4 and 5–8 are referred to as the front of the ship.",
+    "num": "44.3"
+   },
+   {
+    "type": "rule",
+    "text": "Each water space contains a Deep One movement arrow that points to the adjacent deck space.",
+    "num": "44.4"
+   },
+   {
+    "type": "rule",
+    "text": "Water spaces can only contain monster figures.",
+    "num": "44.5"
+   },
+   {
+    "type": "rule",
+    "text": "Players cannot move to water spaces.",
+    "num": "44.6"
+   },
+   {
+    "type": "rule",
+    "text": "Water spaces cannot be damaged.",
+    "num": "44.7"
+   },
+   {
+    "type": "h",
+    "text": "Ship Spaces",
+    "num": "44.8"
+   },
+   {
+    "type": "p",
+    "text": "There are sixteen ship spaces that represent the SS *Atlantica*."
+   },
+   {
+    "type": "rule",
+    "text": "Players can only move to ship spaces.",
+    "num": "44.9"
+   },
+   {
+    "type": "rule",
+    "text": "Any number of characters and Deep Ones can occupy the same ship space.",
+    "num": "44.10"
+   },
+   {
+    "type": "rule",
+    "text": "Ship spaces are subdivided into two types: deck spaces and interior spaces.",
+    "num": "44.11"
+   },
+   {
+    "type": "h3",
+    "text": "Deck Spaces",
+    "num": "44.12"
+   },
+   {
+    "type": "p",
+    "text": "There are eight deck spaces that are arranged around the outer portion of the ship and visually represent the top deck of the ship."
+   },
+   {
+    "type": "rule",
+    "text": "Each deck space is labeled with a number from 1 to 8.",
+    "num": "44.13"
+   },
+   {
+    "type": "rule",
+    "text": "Each deck space contains a Deep One movement arrow that points to the adjacent interior space.",
+    "num": "44.14"
+   },
+   {
+    "type": "rule",
+    "text": "Deck spaces cannot be damaged.",
+    "num": "44.15"
+   },
+   {
+    "type": "rule",
+    "text": "Passengers can only be placed in deck spaces.",
+    "num": "44.16"
+   },
+   {
+    "type": "bullet",
+    "text": "Any number of passengers can occupy the same deck space."
+   },
+   {
+    "type": "h3",
+    "text": "Interior Spaces",
+    "num": "44.17"
+   },
+   {
+    "type": "p",
+    "text": "There are eight interior spaces that are arranged within the inner portion of the ship and visually represent the ship’s interior rooms."
+   },
+   {
+    "type": "rule",
+    "text": "Each interior space is labeled with its unique name, a brief description of that space’s abilities, and, except for the Brig and the Sick Bay, one or more numbers from 1 to 8.",
+    "num": "44.18"
+   },
+   {
+    "type": "bullet",
+    "text": "The complete ability text for each interior space is presented on the player reference sheet."
+   },
+   {
+    "type": "rule",
+    "text": "Interior spaces can be damaged, except for the Brig and Sick Bay.",
+    "num": "44.19"
+   },
+   {
+    "type": "rule",
+    "text": "The Sick Bay and Brig have the following unique rules:",
+    "num": "44.20"
+   },
+   {
+    "type": "bullet",
+    "text": "These spaces cannot be damaged."
+   },
+   {
+    "type": "bullet",
+    "text": "Deep Ones cannot spawn in or move to these spaces."
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot voluntarily move to these spaces."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Adjacency",
+   "Back of the Ship",
+   "Deep One Movement Arrows",
+   "Front of the Ship"
+  ]
+ },
+ {
+  "num": "45",
+  "title": "Spawn",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "When a player is instructed to “spawn X Deep Ones,” they take X Deep One figures from the supply and place them in the indicated spaces."
+   },
+   {
+    "type": "rule",
+    "text": "If a player must spawn Deep Ones, but there are not enough Deep Ones in the supply to spawn, the game ends.",
+    "num": "45.1"
+   }
+  ],
+  "related": [
+   "Activations",
+   "Deep",
+   "Ending the Game"
+  ]
+ },
+ {
+  "num": "46",
+  "title": "Spell Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Spell cards represent magical spells that can be resolved using the action ability on the Keeper of the Tome title card."
+   },
+   {
+    "type": "rule",
+    "text": "A player can only resolve a spell card when an ability allows them to do so.",
+    "num": "46.1"
+   },
+   {
+    "type": "bullet",
+    "text": "To resolve a spell card, the player reveals the card, reads its text aloud, and follows the instructions."
+   },
+   {
+    "type": "sub",
+    "text": "After a spell card is resolved, it is removed from the game."
+   },
+   {
+    "type": "rule",
+    "text": "While there are no cards in the spell deck, players cannot resolve spell cards.",
+    "num": "46.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If a player uses an ability to look at more spell cards than remain in the spell deck, that player looks at as many spell cards as are in the deck and then may choose what to do with those cards within the confines of that ability."
+   },
+   {
+    "type": "example",
+    "text": "*Example: There is only one card in the spell deck when a player uses an ability that says, “Look at the top 2 cards of the spell deck, choose 1 to resolve, and place the other on the bottom of the deck.” That player looks at that card and chooses to either resolve it or return it to the bottom of the spell deck.*"
+   }
+  ],
+  "related": [
+   "Remove from the Game",
+   "Titles"
+  ]
+ },
+ {
+  "num": "47",
+  "title": "Supporting Skills",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Each skill check displays two or more skill icons with the target number for that check. Each of these skill types is a supporting skill."
+   },
+   {
+    "type": "rule",
+    "text": "Supporting skill cards count positively toward the skill check.",
+    "num": "47.1"
+   }
+  ],
+  "related": [
+   "Opposing Skills",
+   "Skill Checks",
+   "Target Number"
+  ]
+ },
+ {
+  "num": "48",
+  "title": "Target Number",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Target numbers are used when resolving skill checks and attacks."
+   },
+   {
+    "type": "rule",
+    "text": "The target number of a skill check is the number that the total value of all cards in a skill check must meet or exceed for that skill check to pass.",
+    "num": "48.1"
+   },
+   {
+    "type": "bullet",
+    "text": "The target number of a skill check is displayed as a number along with two or more skill icons that make up the check’s supporting skills."
+   },
+   {
+    "type": "rule",
+    "text": "The target number of an attack is the minimum die result needed for the attack to succeed.",
+    "num": "48.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If the defender is a Deep One, the target number is 4."
+   },
+   {
+    "type": "bullet",
+    "text": "If the defender is a character, the target number is 6."
+   }
+  ],
+  "related": [
+   "Attack",
+   "Skill Checks",
+   "Supporting Skills"
+  ]
+ },
+ {
+  "num": "49",
+  "title": "Titles",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "There are two special titles in the game, the Captain and the Keeper of the Tome, which are each represented by a title card."
+   },
+   {
+    "type": "rule",
+    "text": "Each title has a line of succession listed on the back of the card.",
+    "num": "49.1"
+   },
+   {
+    "type": "rule",
+    "text": "At the start of the game, each title is given to the player with the character who is highest in the line of succession for that title.",
+    "num": "49.2"
+   },
+   {
+    "type": "rule",
+    "text": "A player loses their titles if either of the following occurs:",
+    "num": "49.3"
+   },
+   {
+    "type": "bullet",
+    "text": "The player moves to the Brig."
+   },
+   {
+    "type": "bullet",
+    "text": "The player reveals as a traitor."
+   },
+   {
+    "type": "rule",
+    "text": "When a character loses a title, it is given to the eligible character who is highest in the line of succession for that title.",
+    "num": "49.4"
+   },
+   {
+    "type": "bullet",
+    "text": "Revealed traitors, humans in the Brig and characters not in play are not eligible."
+   },
+   {
+    "type": "bullet",
+    "text": "The human losing a title is only eligible if all other humans are in the Brig and that player is not revealing as a traitor."
+   },
+   {
+    "type": "bullet",
+    "text": "If a player loses a title and all humans are in the Brig, the title is given to the human in the Brig who is highest in the line of succession for that title."
+   },
+   {
+    "type": "h",
+    "text": "Captain",
+    "num": "49.5"
+   },
+   {
+    "type": "p",
+    "text": "The Captain is the character currently in command of the ship. They are charged with decisions about the ship and its resources, as well as its course."
+   },
+   {
+    "type": "rule",
+    "text": "References to “the Captain” refer to the player with the Captain title card.",
+    "num": "49.6"
+   },
+   {
+    "type": "rule",
+    "text": "The player with the Captain title receives the waypoint deck along with the title card.",
+    "num": "49.7"
+   },
+   {
+    "type": "rule",
+    "text": "The Captain chooses between the top two cards of the waypoint deck when the token on the travel track reaches the Arrive space.",
+    "num": "49.8"
+   },
+   {
+    "type": "rule",
+    "text": "The Captain makes a choice on numerous crises.",
+    "num": "49.9"
+   },
+   {
+    "type": "h",
+    "text": "Keeper of the Tome",
+    "num": "49.10"
+   },
+   {
+    "type": "p",
+    "text": "The Keeper of the Tome is the character who has been tasked with ensuring the safety of the tome of magical spells."
+   },
+   {
+    "type": "rule",
+    "text": "References to “the Keeper of the Tome” refer to the player with the Keeper of the Tome title card.",
+    "num": "49.11"
+   },
+   {
+    "type": "rule",
+    "text": "The player with the Keeper of the Tome title receives the spell deck along with the title card.",
+    "num": "49.12"
+   },
+   {
+    "type": "rule",
+    "text": "The Keeper of the Tome title card has an action ability that allows the Keeper of the Tome to look at the top two cards of the spell deck, resolve one of them, and place the other on the bottom of the deck.",
+    "num": "49.13"
+   },
+   {
+    "type": "bullet",
+    "text": "After a spell is resolved, it is removed from the game."
+   },
+   {
+    "type": "bullet",
+    "text": "If the spell deck is empty, the Keeper of the Tome cannot use the Keeper of the Tome ability to resolve spells."
+   },
+   {
+    "type": "rule",
+    "text": "The Keeper of the Tome makes a choice on several crises.",
+    "num": "49.14"
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Reveal as a Traitor",
+   "Spell Cards",
+   "Tracks",
+   "Waypoint Cards"
+  ]
+ },
+ {
+  "num": "50",
+  "title": "Tracks",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "There are two tracks on the board: the travel track and the ritual track."
+   },
+   {
+    "type": "rule",
+    "text": "When instructed to advance a track, move the token on that track the indicated number of spaces away from the Start space.",
+    "num": "50.1"
+   },
+   {
+    "type": "bullet",
+    "text": "If a token reaches its track’s end space and still has spaces of movement remaining, the token continues moving after it is reset to the Start space."
+   },
+   {
+    "type": "rule",
+    "text": "When instructed to retreat a track, move the token on that track the indicated number of spaces toward the Start space.",
+    "num": "50.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If a token is already in its Start space, it cannot retreat."
+   },
+   {
+    "type": "rule",
+    "text": "When instructed to reset a track, place the token on that track on the track’s Start space.",
+    "num": "50.3"
+   },
+   {
+    "type": "bullet",
+    "text": "If a token is already in its Start space, it remains there."
+   },
+   {
+    "type": "h",
+    "text": "Travel Track",
+    "num": "50.4"
+   },
+   {
+    "type": "p",
+    "text": "The travel track indicates the SS *Atlantica*’s progress towards the next waypoint on its journey."
+   },
+   {
+    "type": "rule",
+    "text": "The token on the travel track advances when a travel track icon on a mythos card is resolved",
+    "num": "50.5"
+   },
+   {
+    "type": "rule",
+    "text": "Players can advance the token on the travel track by performing the action ability for the Boiler Room.",
+    "num": "50.6"
+   },
+   {
+    "type": "rule",
+    "text": "Each time the token on the travel track advances, move each monster in each water space one water space toward the back of the ship for each space the token advanced.",
+    "num": "50.7"
+   },
+   {
+    "type": "bullet",
+    "text": "Move each monster that was already in one of the water spaces at the back of the ship to the Deep."
+   },
+   {
+    "type": "rule",
+    "text": "When the token on the travel track reaches the Arrive space, the ship has reached the next waypoint in its journey.",
+    "num": "50.8"
+   },
+   {
+    "type": "bullet",
+    "text": "If there are waypoint cards with a total distance of 12 or more in play when the token reaches this space, the ship has reached its final destination and the game ends."
+   },
+   {
+    "type": "bullet",
+    "text": "If the total distance of the waypoint cards in play is less than 12, the player with the Captain title looks at the top two cards of the waypoint deck, chooses one to resolve, and places the other on the bottom of the waypoint deck."
+   },
+   {
+    "type": "sub",
+    "text": "When the Captain resolves a waypoint card, they place it in a row beside any other waypoint cards already in play. Then, they resolve the effects of that waypoint card."
+   },
+   {
+    "type": "sub",
+    "text": "After the Captain resolves a waypoint card, they move the token on the travel track to the Start space of that track."
+   },
+   {
+    "type": "sub",
+    "text": "After the Captain resolves the waypoint card that brings the total distance on waypoint cards in play to 6 or more, the players resolve the awakening phase."
+   },
+   {
+    "type": "h",
+    "text": "Ritual Track",
+    "num": "50.9"
+   },
+   {
+    "type": "p",
+    "text": "The ritual track represents progress toward the casting of a greater banishment spell."
+   },
+   {
+    "type": "rule",
+    "text": "The token on the ritual track advances when a ritual track icon on a mythos card is resolved",
+    "num": "50.10"
+   },
+   {
+    "type": "rule",
+    "text": "Players can advance the token on the ritual track by performing the action ability for the Chapel.",
+    "num": "50.11"
+   },
+   {
+    "type": "rule",
+    "text": "When the token on the ritual track reaches the Cast space, the greater banishment spell is cast. To cast the spell, the players perform the following:",
+    "num": "50.12"
+   },
+   {
+    "type": "bullet",
+    "text": "Return all Deep Ones in deck and water spaces to the supply."
+   },
+   {
+    "type": "sub",
+    "text": "Deep Ones in interior spaces are unaffected by the greater banishment spell."
+   },
+   {
+    "type": "bullet",
+    "text": "Move Father Dagon and Mother Hydra to the Deep."
+   },
+   {
+    "type": "bullet",
+    "text": "Defeat each passenger token in each deck space."
+   },
+   {
+    "type": "bullet",
+    "text": "Defeat each character in each deck space."
+   },
+   {
+    "type": "sub",
+    "text": "Defeated humans are moved to the Sick Bay and defeated revealed traitors are moved to the Brig."
+   },
+   {
+    "type": "sub",
+    "text": "Characters in interior spaces are unaffected by the greater banishment spell."
+   },
+   {
+    "type": "bullet",
+    "text": "Move the token on the ritual track to the Start space of that track."
+   }
+  ],
+  "related": [
+   "Action Abilities",
+   "Awakening Phase",
+   "Back of the Ship",
+   "Spell Cards",
+   "Titles",
+   "Waypoint Cards"
+  ]
+ },
+ {
+  "num": "51",
+  "title": "Traitors",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A player with one or more Hybrid or Cultist loyalty cards is a traitor."
+   }
+  ],
+  "related": [
+   "Loyalty Cards",
+   "Reveal as a Traitor",
+   "Revealed Traitors"
+  ]
+ },
+ {
+  "num": "52",
+  "title": "Treachery Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Treachery cards are a type of skill card that can only be used by revealed traitors."
+   },
+   {
+    "type": "rule",
+    "text": "Only revealed traitors may draw and use abilities on treachery cards.",
+    "num": "52.1"
+   },
+   {
+    "type": "rule",
+    "text": "Some treachery cards are played at the start of a player’s Action step and have the text “end your action step.” When one of these cards is played, the current player cannot perform actions or use any other cards that are played at the start of their Action step during that turn.",
+    "num": "52.2"
+   },
+   {
+    "type": "rule",
+    "text": "Treachery cards are always an opposing skill for skill checks.",
+    "num": "52.3"
+   }
+  ],
+  "related": [
+   "Chaos Deck",
+   "Opposing Skills",
+   "Skill Cards"
+  ]
+ },
+ {
+  "num": "53",
+  "title": "Turn Structure",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "**Unfathomable** is played in a series of player turns."
+   },
+   {
+    "type": "rule",
+    "text": "Starting with the current player chosen during setup and proceeding clockwise, each player takes a turn.",
+    "num": "53.1"
+   },
+   {
+    "type": "rule",
+    "text": "The structure of a turn depends on whether the current player is a human or a revealed traitor.",
+    "num": "53.2"
+   },
+   {
+    "type": "h",
+    "text": "Human Turn",
+    "num": "53.3"
+   },
+   {
+    "type": "p",
+    "text": "If the current player is not a revealed traitor, they perform the following steps in order during their turn:"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—**Receive Skills:** The current player draws the type and quantity of skill cards indicated by their skill set.",
+    "num": "53.4"
+   },
+   {
+    "type": "bullet",
+    "text": "If the current player is in Sick Bay, they draw only one card of their choice from their skill set."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—**Action:** The current player performs two actions of their choice. A player may perform the same action multiple times.",
+    "num": "53.5"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—**Mythos:** The current player draws and resolves a mythos card.",
+    "num": "53.6"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 4]]—**Discard:** Each player with more than 10 skill cards in hand must discard cards until they have 10 skill cards in hand.",
+    "num": "53.7"
+   },
+   {
+    "type": "rule",
+    "text": "When the current player finishes these steps, they pass the current player token to the player to their left and that player takes their turn.",
+    "num": "53.8"
+   },
+   {
+    "type": "h",
+    "text": "Revealed Traitor Turn",
+    "num": "53.9"
+   },
+   {
+    "type": "p",
+    "text": "If the current player is a revealed traitor, they perform the following steps in order during their turn:"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 1]]—**Receive Skills:** The current player draws the type and quantity of skill cards indicated by their skill set.",
+    "num": "53.10"
+   },
+   {
+    "type": "bullet",
+    "text": "The current player may choose not to draw any number of cards in their skill set. Then, for each card they did not draw, they draw one card from the treachery skill deck."
+   },
+   {
+    "type": "sub",
+    "text": "The player must decide how many treachery cards to draw before drawing any cards."
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 2]]—**Action:** The current player performs two actions of their choice. A player may perform the same action twice.",
+    "num": "53.11"
+   },
+   {
+    "type": "rule",
+    "text": "[[STEP 3]]—**Discard:** Each player with more than 10 skill cards in hand must discard cards until they have 10 skill cards in hand.",
+    "num": "53.12"
+   },
+   {
+    "type": "rule",
+    "text": "When the current player finishes these steps, they pass the current player token to the player to their left and that player takes their turn.",
+    "num": "53.13"
+   }
+  ],
+  "related": [
+   "Actions",
+   "Hand Limit",
+   "Mythos Cards",
+   "Sick Bay",
+   "Skill Set"
+  ]
+ },
+ {
+  "num": "54",
+  "title": "Waypoint Cards",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Waypoint cards represent milestones on the SS *Atlantica*’s journey to its final destination."
+   },
+   {
+    "type": "rule",
+    "text": "Each waypoint card has an effect and a distance number.",
+    "num": "54.1"
+   },
+   {
+    "type": "bullet",
+    "text": "Distance numbers range from 2 to 4."
+   },
+   {
+    "type": "rule",
+    "text": "Waypoint cards are put into play by the player with the Captain title when the token on the travel track reaches the Arrive space.",
+    "num": "54.2"
+   },
+   {
+    "type": "bullet",
+    "text": "If there are already waypoint cards with a total distance of 12 or more when the token on the travel track reaches the Arrive space, the game ends."
+   },
+   {
+    "type": "bullet",
+    "text": "After resolving the waypoint card that brings the total distance traveled to 6 or more, players perform the awakening phase."
+   }
+  ],
+  "related": [
+   "Awakening Phase",
+   "Ending the Game",
+   "Object of the Game",
+   "Titles",
+   "Tracks"
+  ]
+ },
+ {
+  "num": "",
+  "title": "Appendix I: No-Cultist Variant",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Some groups may prefer to play without using the Cultist card. When playing games with four or six players, in place of using the Cultist card, add an additional a Human loyalty card to the loyalty deck and set the resource dials to these values:"
+   },
+   {
+    "type": "bullet",
+    "text": "Fuel – 7"
+   },
+   {
+    "type": "bullet",
+    "text": "Food – 6"
+   },
+   {
+    "type": "bullet",
+    "text": "Sanity – 6"
+   },
+   {
+    "type": "bullet",
+    "text": "Souls – 7"
+   }
+  ],
+  "related": []
+ },
+ {
+  "num": "",
+  "title": "Appendix II: Adjusting Difficulty",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "If a group finds that it is too easy for either the humans or the traitors to win the game, they may decide before the start of the game to make the game easier for the other side."
+   },
+   {
+    "type": "p",
+    "text": "To make the game easier for the human players, start the game with two more of each resource."
+   },
+   {
+    "type": "p",
+    "text": "To make the game easier for the traitors, start the game with two fewer of each resource."
+   }
+  ],
+  "related": []
+ },
+ {
+  "num": "",
+  "title": "Appendix III: Secrecy Guidelines",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "A key element of **Unfathomable** is the uncertainty, intrigue and paranoia surrounding the identity of the traitors. To facilitate these feelings, guidelines about how players can communicate are needed to allow hidden traitors the opportunity to maintain their cover while trying to sabotage the ship."
+   },
+   {
+    "type": "p",
+    "text": "These guidelines are recommended for limiting communication between players to facilitate an atmosphere of suspicion and distrust. By limiting what players can say, hidden traitors have cover and can operate in secrecy without having to lie convincingly."
+   },
+   {
+    "type": "p",
+    "text": "These guidelines are not intended to be strict rules. They are provided as a starting point from which a group can decide upon the rules that work best for them. Each group may add to, amend, or remove rules for communicating as they see fit, as long as these changes are agreed upon before the game begins."
+   },
+   {
+    "type": "h",
+    "text": "Key Guidelines"
+   },
+   {
+    "type": "bullet",
+    "text": "Players are not required to tell the truth at any time, unless providing open information."
+   },
+   {
+    "type": "example",
+    "text": "*Example: a player must reply truthfully when asked how many cards they have in hand.*"
+   },
+   {
+    "type": "bullet",
+    "text": "Players must speak in generalities about any hidden information they may be aware of so that those who are telling the truth are indistinguishable from those who are lying."
+   },
+   {
+    "type": "sub",
+    "text": "When in doubt, players may make statements that are “polar opposites.” This means that players may say if they have a “high” or “low” value card but may not say that they have a “pretty high,” “kind of low” or even a “medium” value card."
+   },
+   {
+    "type": "bullet",
+    "text": "Players can only ask other players “yes” or “no” questions about hidden information that another player may have. The player being asked does not have to reply truthfully or even at all."
+   },
+   {
+    "type": "bullet",
+    "text": "Players cannot ask another player directly if that player is a traitor. However, players can imply, insinuate, or outright accuse their fellow players of being traitors."
+   },
+   {
+    "type": "h",
+    "text": "Skill Checks"
+   },
+   {
+    "type": "p",
+    "text": "During a skill check, a player cannot declare what card titles, types, colors, or values they added or plan to add to the skill check. They also cannot give information about the cards they added or plan to add that would allow other players to identify which cards that player added after the cards are revealed."
+   },
+   {
+    "type": "p",
+    "text": "After the cards in a skill check are revealed, a player cannot identify which cards they added to that skill check."
+   },
+   {
+    "type": "p",
+    "text": "These are examples of what a player **can** say:"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I am helping a lot with one card.”*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I could help a little.”*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I am adding three cards that are helping a medium amount.”*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I added four low-value cards.”*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“That couldn’t have been me. I don’t draw influence cards.”*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I am the only one who could have added those will cards.” (The player is not directly identifying their cards and instead is making an observation based on open information.)*"
+   },
+   {
+    "type": "p",
+    "text": "These are examples of what a player **cannot** say:"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I am helping a medium amount with one card.” (This can be understood to mean the player added a card with a value of 3.)*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I added four strength cards.” (The player identified the skill types.)*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I can add a bunch of twos.” (The player identified the values.)*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“I added a Preparation into the skill check.” (The player named a card by title that could be identified in the check.)*"
+   },
+   {
+    "type": "bullet",
+    "text": "*“Those are my lore cards.” (The player identified the cards they added, even if they are not being truthful about it.)*"
+   },
+   {
+    "type": "h",
+    "text": "Skill Card Abilities"
+   },
+   {
+    "type": "p",
+    "text": "If a player is hoping that another player has a specific skill card ability, they may ask other players. Players may claim to have or not have a requested card but are not required to do so."
+   },
+   {
+    "type": "p",
+    "text": "Players can say that they can assist in certain tasks, but they cannot read off titles or abilities on cards in their hand. For example, a player can say, “I can help with a die roll,” but cannot say “I have a ’Keen Insight’” or read aloud the ability for that card."
+   },
+   {
+    "type": "h",
+    "text": "Loyalty Cards"
+   },
+   {
+    "type": "p",
+    "text": "If a player is able to look at another player’s loyalty cards, they may not share specific information about the cards. They may however make open accusations of the player being either a traitor or a human. If the player looked at multiple loyalty cards, they may not share the number of traitor cards the player has but may simply accuse them of being a traitor (or not). When a player looks at another player’s loyalty cards, the owner of the loyalty cards is allowed to know which cards are being looked at."
+   },
+   {
+    "type": "h",
+    "text": "Top Card of a Deck"
+   },
+   {
+    "type": "p",
+    "text": "There are times when players receive information about the top card of a deck (such as the waypoint or mythos decks). Players may not share specific information about these cards but may classify the cards as being “bad” or “good.”"
+   },
+   {
+    "type": "h",
+    "text": "Revealed Traitors"
+   },
+   {
+    "type": "p",
+    "text": "Revealed traitors must follow the same rules for communicating as any other player. They may not show their hands to other players."
+   }
+  ],
+  "related": []
+ }
+]

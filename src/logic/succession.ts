@@ -19,10 +19,15 @@ export function nextHolder(title: TitleId, players: Player[]): number | undefine
   return (humans.find((p) => !p.brig) ?? humans[0])?.seat;
 }
 
-export function initialTitles(players: Player[]): Partial<Record<TitleId, number>> {
+/**
+ * Who starts with each title (49.2). With the Delegate Authority prelude, each title goes to the
+ * character next-highest in the line instead.
+ */
+export function initialTitles(players: Player[], delegate = false): Partial<Record<TitleId, number>> {
   const result: Partial<Record<TitleId, number>> = {};
   for (const t of TITLES) {
-    const seat = nextHolder(t, players);
+    const line = ranked(t, players);
+    const seat = (delegate ? line[1] ?? line[0] : line[0])?.seat;
     if (seat !== undefined) result[t] = seat;
   }
   return result;

@@ -48,10 +48,39 @@ ICONS = {
     "act-grasping-tendril": ("horror reference abyss.png", (1135, 1235, 1280, 1370), 150),
     # the generic horror icon (black skull on a purple disc: keep only the black)
     "act-horror": ("horror icon.png", None, 90),
+    # resources (small black glyphs on a tan square)
+    "res-fuel": ("icon fuel.png", None, 110),
+    "res-food": ("icon food.png", None, 110),
+    "res-sanity": ("icon sanity.png", None, 110),
+    "res-souls": ("icon souls.png", None, 110),
+    # treachery has no icon file: take it from under the number on a treachery skill card
+    "skill-treachery": ("skill card treachery front.jpg", (4, 80, 93, 146), 150),
+}
+
+# Skill icons are coloured in the game (orange influence, purple lore, ...), so they stay in colour.
+SKILL_COLOUR = {
+    "skill-influence": "influence icon.png",
+    "skill-lore": "lore icon.png",
+    "skill-observation": "observation icon.png",
+    "skill-strength": "strength icon.png",
+    "skill-will": "will icon.png",
 }
 
 
+def coloured(img):
+    """Trim to the icon and fit it in a transparent square."""
+    img = img.convert("RGBA")
+    img = img.crop(img.getbbox())
+    side = int(max(img.size) * 1.04)
+    out = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    out.paste(img, ((side - img.width) // 2, (side - img.height) // 2), img)
+    return out.resize((SIZE, SIZE), Image.LANCZOS)
+
+
 def to_mask(img, threshold):
+    if max(img.size) < 100:
+        # tiny source (the 42px resource icons): enlarge before smoothing
+        img = img.resize((img.width * 4, img.height * 4), Image.LANCZOS)
     grey = img.convert("RGB").convert("L")
     # soften the print halftone so the ink reads as solid shapes
     grey = grey.filter(ImageFilter.GaussianBlur(0.6 if threshold == 170 else 1.2))
@@ -87,6 +116,9 @@ def main():
         if box:
             img = img.crop(box)
         to_mask(img, threshold).save(out_dir / f"{name}.png", optimize=True)
+        print(name)
+    for name, fname in SKILL_COLOUR.items():
+        coloured(Image.open(src / fname)).save(out_dir / f"{name}.png", optimize=True)
         print(name)
 
 

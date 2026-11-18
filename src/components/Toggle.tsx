@@ -1,6 +1,4 @@
-import { t } from "../i18n";
-
-/** On/off row: label (and optional hint) on the left, a switch on the right. */
+/** On/off row: label (and optional hint) on the left, a framed checkbox on the right. */
 export function Toggle({
   label,
   checked,
@@ -21,8 +19,10 @@ export function Toggle({
         {hint && <span className="toggle-hint">{hint}</span>}
       </span>
       <input type="checkbox" checked={checked} disabled={disabled} onChange={(e) => onChange(e.target.checked)} />
-      <span className="switch" aria-hidden>
-        <span className="switch-text">{checked ? t("toggle.on") : t("toggle.off")}</span>
+      <span className="check" aria-hidden>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2.5 7.5l3 3 6-7" />
+        </svg>
       </span>
     </label>
   );

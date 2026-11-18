@@ -1,4 +1,4 @@
-import { Collapsible } from "../components/Collapsible";
+import { PreludeSetup } from "../components/PreludeSetup";
 import { Portrait } from "../components/Portrait";
 import { Toggle } from "../components/Toggle";
 import { characterById, characters, type Box } from "../data/characters";
@@ -6,7 +6,7 @@ import { TITLE_LABEL, TITLES } from "../data/succession";
 import { T, t, tp } from "../i18n";
 import { computeLoyalty, MAX_PLAYERS, MIN_PLAYERS, type LoyaltyKind } from "../logic/loyalty";
 import { initialTitles } from "../logic/succession";
-import { useStore, type Config } from "../state/store";
+import { delegated, useStore, type Config } from "../state/store";
 
 const KINDS: LoyaltyKind[] = ["hybrid", "cultist", "human"];
 const DIALS = ["fuel", "food", "sanity", "souls"] as const;
@@ -19,7 +19,9 @@ export function SetupView({ go }: { go: (tab: string) => void }) {
 
   const n = players.length;
   const loyalty = computeLoyalty(config, n);
-  const titles = initialTitles(players);
+  // With the Delegate Authority prelude drawn, each title starts with the second in line.
+  const delegate = delegated(state);
+  const titles = initialTitles(players, delegate);
   const full = n >= MAX_PLAYERS;
   const canStart = loyalty.valid;
 
@@ -72,6 +74,9 @@ export function SetupView({ go }: { go: (tab: string) => void }) {
           <Toggle label={t("setup.preludes")} hint={t("setup.preludes.hint")} checked={config.preludes} disabled={locked} onChange={(v) => set({ preludes: v })} />
         )}
       </section>
+
+      {/* right under the switch that turns it on, so it is easy to find */}
+      {config.abyss && config.preludes && <PreludeSetup locked={locked} />}
 
       <section className="card">
         <h2>
@@ -150,6 +155,7 @@ export function SetupView({ go }: { go: (tab: string) => void }) {
                 </li>
               ))}
             </ul>
+            {delegate && <p className="muted small">{t("setup.start.delegate")}</p>}
             <div className="dials">
               {DIALS.map((d) => (
                 <div key={d} className="dial">
@@ -158,17 +164,6 @@ export function SetupView({ go }: { go: (tab: string) => void }) {
                 </div>
               ))}
             </div>
-            {config.preludes && (
-              <Collapsible title={t("setup.preludes.title")} level={3} open>
-                <p>{t("setup.preludes.when")}</p>
-                <ol>
-                  <li>{t("setup.preludes.day")}</li>
-                  <li>{t("setup.preludes.twilight")}</li>
-                  <li>{t("setup.preludes.night")}</li>
-                </ol>
-                <p className="muted small">{t("setup.preludes.after")}</p>
-              </Collapsible>
-            )}
           </section>
         </>
       ) : (
