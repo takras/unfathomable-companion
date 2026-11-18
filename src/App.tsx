@@ -3,6 +3,7 @@ import { NavIcon } from "./components/NavIcon";
 import { getLanguage, t } from "./i18n";
 import { useStore } from "./state/store";
 import { useTheme } from "./state/theme";
+import { AboutView } from "./views/AboutView";
 import { DiceView } from "./views/DiceView";
 import { MonstersView } from "./views/MonstersView";
 import { RolesView } from "./views/RolesView";
@@ -48,7 +49,8 @@ export function App() {
   // "rules/4.13" = a page and a target on it
   const [tab, ...rest] = route.split("/");
   const param = rest.join("/") || undefined;
-  const current = (DOCK as readonly string[]).includes(tab) ? tab : "setup";
+  // "about" is reached from the footer, not the dock
+  const current = (DOCK as readonly string[]).includes(tab) || tab === "about" ? tab : "setup";
   const { config, players, phase } = state;
 
   return (
@@ -96,6 +98,7 @@ export function App() {
           {current === "roles" && <RolesView go={go} />}
           {current === "dice" && <DiceView />}
           {current === "monsters" && <MonstersView />}
+          {current === "about" && <AboutView />}
           {current === "rules" && (
             <Suspense fallback={<p className="view muted">{t("rules.loading")}</p>}>
               <RulesView target={param} go={go} />
@@ -104,7 +107,7 @@ export function App() {
         </main>
 
         <footer className="footer small muted">
-          {t("app.footer", { version: __APP_VERSION__ })}
+          {t("app.footer")} · <a href="#/about">{t("app.about")}</a> · v{__APP_VERSION__}
         </footer>
       </div>
     </Fragment>

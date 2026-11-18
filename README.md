@@ -39,3 +39,13 @@ npm run build    # static site in dist/
   using the book's fonts to tell headings, numbered rules, bullets, examples and inline icons apart (needs pdfplumber).
 
 The image scripts need Python with Pillow, NumPy and SciPy.
+
+## License and disclaimer
+
+Unofficial fan project, **not affiliated with, endorsed or sponsored by Fantasy Flight Games**. The artwork,
+icons and rules text in this app are not my own: they come from *Unfathomable* and *From the Abyss* and belong to
+Fantasy Flight Games.
+
+The app's own code and design are released under the [MIT License](LICENSE). The license does not cover the game
+material; see [NOTICE.md](NOTICE.md) for what that includes and for third-party credits. The app shows the same
+information under **About & licences** (footer link).

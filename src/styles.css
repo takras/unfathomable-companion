@@ -1588,3 +1588,50 @@ mark {
   border-left: 3px solid var(--traitor);
   padding-left: 8px;
 }
+
+/* ---------- about ---------- */
+
+.footer a {
+  color: var(--frame);
+}
+.about .disclaimer {
+  border-width: 2px;
+}
+.credits {
+  list-style: none;
+  padding: 0;
+}
+.credits > li::before {
+  content: none;
+}
+.credits li {
+  margin: 0;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+}
+.credits li:first-child {
+  border-top: 0;
+}
+.credit-name {
+  font-weight: 600;
+}
+.credit-name a {
+  color: var(--frame);
+}
+.credit-detail {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.spaced {
+  margin-top: 18px;
+}
+.licence-texts {
+  max-height: 60vh;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-size: 0.72rem;
+  background: var(--box);
+  border: 1px solid var(--line);
+  padding: 8px;
+}
