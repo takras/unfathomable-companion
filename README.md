@@ -35,6 +35,8 @@ npm run build    # static site in dist/
   `src/assets/icons/`. The "choice of track" icon is drawn as SVG in `src/components/GameIcon.tsx`.
 - `npm run preludes` - `scripts/extract_preludes.py` cuts the 15 prelude cards from their sheet into
   `assets/preludes/*.jpg` and `src/assets/preludes/*.webp`; their text is in `src/data/preludes.ts`.
+- `npm run app-icon` - `scripts/icon.mjs` draws the app icon (Mother Hydra in the box's art-nouveau frame) into
+  `assets/icon.svg` / `assets/icon-1024.png` and writes the favicon, touch and manifest icons to `public/`.
 - `npm run rules` - `scripts/extract_rules.py` reads the Rules Reference PDF into `src/content/rules-reference.json`,
   using the book's fonts to tell headings, numbered rules, bullets, examples and inline icons apart (needs pdfplumber).
 

@@ -1,0 +1,15 @@
+{
+  "name": "Unfathomable Companion",
+  "short_name": "Unfathomable",
+  "description": "Unofficial companion for Unfathomable: setup, roles, dice, monster activations and rules.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e1e3ec",
+  "theme_color": "#e1e3ec",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
