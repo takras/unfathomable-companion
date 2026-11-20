@@ -41,7 +41,7 @@
   "setup.preludes.hint": "Shuffle and draw prelude cards in the app; the Preludes section opens just below.",
   "setup.characters": "Characters",
   "setup.characters.count": "{n}/{max}",
-  "setup.characters.hint": "Tap the characters in play, in the order they were chosen ({min}–{max} players). Any character can be chosen.",
+  "setup.characters.hint": "Tap the characters in play ({min}–{max} players). Any character can be chosen.",
   "setup.needPlayers": "Choose {min} to {max} characters to see the loyalty deck and starting titles.",
   "setup.loyalty": "Loyalty deck",
   "loyalty.hybrid.one": "Hybrid",

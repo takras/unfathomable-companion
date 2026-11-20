@@ -59,12 +59,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Apple rejects an upload built against an SDK older than iOS 26, and that is only visible at
-      # the very end of a run, so the SDK in use is logged here where it is cheap to read.
+      # The image's default Xcode lags behind: it can be older than the newest Xcode installed beside it.
+      # Apple raises the minimum SDK every year (from April 2027 uploads need the iOS 27 SDK, ITMS-90725),
+      # so use the newest stable Xcode on the image (no betas or release candidates).
+      - name: Select the newest Xcode
+        run: |
+          latest=$(ls -d /Applications/Xcode_*.app | grep -v -i -E 'beta|rc|release_candidate' | sort -V | tail -1)
+          echo "Installed:" && ls -d /Applications/Xcode_*.app
+          echo "Using: $latest"
+          sudo xcode-select -s "$latest/Contents/Developer"
+
+      # Apple rejects (or warns about) an upload built against an old SDK, and that is only visible at the
+      # very end of a run, so the SDK in use is logged here, with a warning while it is older than iOS 27.
       - name: Show Xcode and SDK version
         run: |
           xcodebuild -version
           xcodebuild -showsdks | grep -i iphoneos
+          sdk=$(xcodebuild -showsdks | grep -o 'iphoneos[0-9.]*' | sed 's/iphoneos//' | sort -V | tail -1)
+          if [ "${sdk%%.*}" -lt 27 ]; then
+            echo "::warning::Building with the iOS $sdk SDK. From April 2027 App Store Connect requires the iOS 27 SDK (Xcode 27); this runner image has no newer Xcode yet."
+          fi
 
       # Builds the web app, copies it into the iOS project, and derives the versions from
       # package.json: marketing 1.2.3, build number 10203 (same scheme as the Android versionCode).

@@ -90,8 +90,7 @@ export function SetupView({ go }: { go: (tab: string) => void }) {
               {characters
                 .filter((ch) => ch.box === box)
                 .map((ch) => {
-                  const idx = players.findIndex((p) => p.characterId === ch.id);
-                  const picked = idx >= 0;
+                  const picked = players.some((p) => p.characterId === ch.id);
                   return (
                     <button
                       key={ch.id}
@@ -101,7 +100,11 @@ export function SetupView({ go }: { go: (tab: string) => void }) {
                       onClick={() => toggleChar(ch.id)}
                     >
                       <Portrait id={ch.id} size={84} dim={!picked && full} />
-                      {picked && <span className="pick-no">{idx + 1}</span>}
+                      {picked && (
+                        <span className="pick-no" aria-hidden>
+                          ✓
+                        </span>
+                      )}
                       <span className="char-name">{ch.name}</span>
                       <span className="char-epithet">{ch.epithet}</span>
                     </button>

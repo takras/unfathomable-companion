@@ -51,6 +51,19 @@ App id `net.takras.unfathomable`, name "Unfathomable Companion". The native proj
   size with `@capacitor/assets`.
 - After changing web code, run `npm run cap:sync` (or the scripts above) before building natively.
 
+## Store listings
+
+`store/` holds everything for the two stores, as in BSG Companion:
+
+- `store/app-store/listing.md` and `store/google-play/listing.md` - every listing field ready to paste (name,
+  subtitle, descriptions, keywords, URLs, review notes, age rating, privacy and content answers).
+  `node store/check-listing.mjs` checks them against the stores' character limits.
+- Screenshots and graphics, made by `npm run store` (`scripts/store-graphics.mjs`): the production build is
+  captured in headless Chrome with a sample game and framed with headlines. Google Play phone, 7" and 10" tablet
+  screenshots plus the 1024×500 feature graphic; App Store iPhone 6.3" and iPad 13" screenshots (PNG and JPG) plus
+  the three creative assets.
+- `public/support.html` and `public/privacy.html` are the support and privacy URLs both stores ask for.
+
 ## Assets
 
 `source/` holds the rulebook PDFs and the original card scans (not bundled). Generated from them:

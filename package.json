@@ -18,7 +18,8 @@
     "ios": "npm run cap:sync && cap open ios",
     "android:debug": "npm run cap:sync && node scripts/gradle.mjs assembleDebug",
     "android:release": "npm run cap:sync && node scripts/gradle.mjs bundleRelease",
-    "android:install": "npm run cap:sync && node scripts/gradle.mjs installDebug"
+    "android:install": "npm run cap:sync && node scripts/gradle.mjs installDebug",
+    "store": "npm run build && node scripts/store-graphics.mjs"
   },
   "dependencies": {
     "@capacitor/android": "8.5.2",

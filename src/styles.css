@@ -55,6 +55,8 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 body {
+  /* no rubber-band pull of the whole page (it drags the fixed header and tab bar along on iOS) */
+  overscroll-behavior-y: none;
   background-color: var(--paper);
   background-image: radial-gradient(ellipse at 50% 40%, transparent 55%, var(--paper-deep) 100%), var(--grain);
   background-attachment: fixed;
@@ -150,6 +152,8 @@ button {
   font: inherit;
   color: inherit;
   cursor: pointer;
+  /* taps act at once instead of waiting to see if they are a double-tap zoom */
+  touch-action: manipulation;
 }
 button:disabled {
   cursor: default;
@@ -204,6 +208,14 @@ select {
 
 /* ---------- shell ---------- */
 
+/* Never scroll sideways: on phones anything poking past the right edge (even briefly) makes the browser widen
+   the layout. clip (not hidden) keeps the sticky header working. */
+html,
+body,
+.app {
+  overflow-x: clip;
+}
+
 .app {
   max-width: 760px;
   margin: 0 auto;
@@ -227,7 +239,12 @@ select {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 0 4px;
+  padding: 10px 0 9px;
+}
+@media (min-width: 900px) {
+  .top-bar {
+    padding-bottom: 4px;
+  }
 }
 .brand {
   flex: 1;
@@ -274,11 +291,28 @@ select {
   border-color: var(--traitor);
 }
 
+/* Tab bar. Phones and tablets: docked at the bottom of the screen, within thumb reach and clear of the
+   home indicator / Android navigation buttons (--sa-bottom) and of landscape notches (--sa-left/right).
+   Wide screens: tabs under the title in the header (as in BSG Companion). */
 .dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
   display: flex;
+  justify-content: center;
+  background-color: var(--paper);
+  background-image: var(--grain);
+  /* the header's double rule, mirrored */
+  border-top: 1.5px solid var(--frame);
+  box-shadow: 0 -2px 0 var(--paper), 0 -3.5px 0 var(--frame);
+  padding: 0 max(8px, var(--sa-right)) var(--sa-bottom) max(8px, var(--sa-left));
 }
 .dock a {
   flex: 1;
+  max-width: 152px;
+  touch-action: manipulation;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,11 +324,31 @@ select {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.04em;
-  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  padding: 5px 0 7px;
 }
 .dock a.active {
   color: var(--ochre);
-  border-bottom-color: var(--ochre);
+  border-top-color: var(--ochre);
+}
+@media (min-width: 900px) {
+  .dock {
+    position: static;
+    justify-content: stretch;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .dock a {
+    max-width: none;
+    border-top: 0;
+    border-bottom: 3px solid transparent;
+    padding: 6px 0 7px;
+  }
+  .dock a.active {
+    border-bottom-color: var(--ochre);
+  }
 }
 
 main {
@@ -307,7 +361,8 @@ main {
 /* like the "— 4 —" page numbers */
 .footer {
   text-align: center;
-  padding: 18px 16px calc(18px + var(--sa-bottom));
+  /* clear of the docked tab bar (which already includes the bottom inset), or of the inset itself */
+  padding: 18px 16px calc(18px + max(var(--dock-h, 0px), var(--sa-bottom)));
 }
 .footer::before,
 .footer::after {
@@ -935,7 +990,7 @@ svg.game-icon {
   z-index: 40;
   left: max(8px, var(--sa-left));
   top: calc(var(--sa-top) + 8px);
-  bottom: calc(var(--sa-bottom) + 70px);
+  bottom: calc(max(var(--dock-h, 0px), var(--sa-bottom)) + 70px);
   width: min(330px, 86vw);
   display: flex;
   flex-direction: column;
@@ -1032,7 +1087,7 @@ button.toc-fab {
   position: fixed;
   z-index: 41;
   right: max(16px, calc((100vw - 760px) / 2 + 16px));
-  bottom: calc(16px + var(--sa-bottom));
+  bottom: calc(14px + max(var(--dock-h, 0px), var(--sa-bottom)));
   background: var(--frame);
   color: var(--paper);
   border: 0;

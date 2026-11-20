@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support - Unfathomable Companion</title>
+    <link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" href="./favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta
+      name="description"
+      content="Support for Unfathomable Companion, an unofficial fan-made companion app for the board game Unfathomable."
+    />
+    <style>
+      /* the app's look: lavender paper, serif text, purple rules (fonts are the system's here) */
+      :root {
+        --bg: #e1e3ec;
+        --text: #1c1b20;
+        --muted: #5d6273;
+        --accent: #5c7350;
+        --frame: #2d254b;
+        --line: rgba(45, 37, 75, 0.25);
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #141a36;
+          --text: #ece5d0;
+          --muted: #a9aec4;
+          --accent: #9cc2a0;
+          --frame: #efe4c4;
+          --line: rgba(239, 228, 196, 0.25);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 18px/1.5 Georgia, "Times New Roman", serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px 16px 64px;
+      }
+      h1 {
+        font-size: 1.9rem;
+        font-weight: 600;
+        margin: 0 0 4px;
+        color: var(--frame);
+        letter-spacing: 0.02em;
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin: 28px 0 8px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      p,
+      li {
+        margin: 0 0 10px;
+      }
+      ul {
+        padding-left: 1.25em;
+      }
+      .meta {
+        color: var(--muted);
+        font-style: italic;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1.5px solid var(--frame);
+      }
+      a {
+        color: inherit;
+      }
+      footer {
+        margin-top: 40px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 4px;
+      }
+      header img {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./icon-192.png" alt="" />
+        <h1>Unfathomable Companion - Support</h1>
+      </header>
+      <p class="meta">
+        An unofficial, fan-made helper for the board game <em>Unfathomable</em>.
+      </p>
+
+      <h2>Getting started</h2>
+      <ul>
+        <li>
+          <strong>Setup:</strong> tick <em>From the Abyss</em> if you play with
+          the expansion, then tap the characters your table picked. The app
+          shows the loyalty deck, the starting titles and resource dials, and
+          can draw your prelude cards.
+        </li>
+        <li>
+          <strong>Roles:</strong> after <em>Start game</em>, mark players as in
+          the Brig or revealed as traitors - the Captain and Keeper of the Tome
+          titles pass down the lines of succession automatically.
+        </li>
+        <li>
+          <strong>Dice, Monsters, Rules:</strong> the attack table, what each
+          monster does for the activation icons on your mythos card, and the
+          full searchable Rules Reference, with From the Abyss changes shown
+          when the expansion is in the game.
+        </li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <p>
+        <strong>Does it need an internet connection?</strong><br />The apps work
+        fully offline. The website needs a connection to load.
+      </p>
+      <p>
+        <strong>Where is my game saved?</strong><br />Only on your device. It is
+        kept when you close the app; nothing is sent anywhere.
+      </p>
+      <p>
+        <strong>How do I start a new game?</strong><br />Tap <em>New game</em>
+        at the top. This clears the characters, titles, statuses and the log,
+        but keeps your game settings.
+      </p>
+      <p>
+        <strong>A rule looks wrong.</strong><br />Please let us know (see below)
+        with the screen it is on and whether you play with From the Abyss. The
+        rules come from the official Rules Reference and the From the Abyss
+        rulebook.
+      </p>
+      <p>
+        <strong>Is this an official app?</strong><br />No. It is a free fan
+        project and is not affiliated with Fantasy Flight Games. You need the
+        board game to play.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions, bugs or rule corrections:
+        <strong>takras@takras.net</strong>
+      </p>
+      <p>
+        Privacy: see the <a href="./privacy.html">privacy policy</a> - the app
+        collects no personal data.
+      </p>
+
+      <footer>
+        Unfathomable Companion is an unofficial fan project and is not
+        affiliated with, endorsed or sponsored by Fantasy Flight Games.
+      </footer>
+    </main>
+  </body>
+</html>

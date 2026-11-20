@@ -31,15 +31,27 @@ export function App() {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  // Sticky things below the header (the rules search, jump targets) need its height.
+  // Sticky things below the header (the rules search, jump targets) need its height, and things near the bottom
+  // (the page's end, the Contents button) need the height of the tab bar when it is docked at the bottom of a
+  // phone screen (0 when it sits in the header on wide screens). Both include the device's safe-area insets.
   useEffect(() => {
     const header = document.querySelector<HTMLElement>(".top");
-    if (!header) return;
-    const set = () => document.documentElement.style.setProperty("--header-h", `${header.offsetHeight}px`);
+    const dock = document.querySelector<HTMLElement>(".dock");
+    if (!header || !dock) return;
+    const root = document.documentElement.style;
+    const set = () => {
+      root.setProperty("--header-h", `${header.offsetHeight}px`);
+      root.setProperty("--dock-h", getComputedStyle(dock).position === "fixed" ? `${dock.offsetHeight}px` : "0px");
+    };
     set();
     const ro = new ResizeObserver(set);
     ro.observe(header);
-    return () => ro.disconnect();
+    ro.observe(dock);
+    window.addEventListener("resize", set);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", set);
+    };
   }, []);
 
   const go = (r: string) => {

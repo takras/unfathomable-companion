@@ -35,7 +35,7 @@ export interface Config {
 export interface State {
   version: 1;
   config: Config;
-  /** Players in the order their characters were picked */
+  /** Players in play. Their order has no meaning in the game (the app does not track seating). */
   players: Player[];
   phase: "setup" | "playing";
   titles: Partial<Record<TitleId, number>>; // seat of the holder

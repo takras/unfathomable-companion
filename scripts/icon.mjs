@@ -274,12 +274,16 @@ writeFileSync("assets/icon-1024.png", await render(full, 1024));
 
 // Sources for the native app icons and splash screens (`npx @capacitor/assets generate`, run by
 // `npm run icons`), as in BSG Companion:
-// - icon-only: the whole icon (iOS, legacy Android)
+// - icon-only: iOS and legacy Android, the Hydra without the frame on the night sky
 // - icon-foreground / icon-background: Android adaptive icon layers. Launchers mask the outer third,
-//   so the foreground (frame and Hydra on transparency) is scaled to fit the visible middle.
+//   so the foreground is the Hydra alone, large, on transparency (no frame).
 // - splash / splash-dark: the framed Hydra on the night sky, 2732 px square.
-writeFileSync("assets/icon-only.png", await render(full, 1024));
-writeFileSync("assets/icon-foreground.png", await render(svg({ scale: 0.66, withBackground: false }), 1024));
+// iOS (and legacy Android) get the same frameless, large Hydra as the Android adaptive icon, on the night sky.
+// iOS rounds the corners itself and shows the whole square, so she can be a little larger than on Android.
+writeFileSync("assets/icon-only.png", await render(svg({ scale: 1.25, withFrame: false }), 1024));
+// The adaptive foreground has no frame: framed, it had to shrink to fit the mask and looked small on the
+// home screen. The Hydra is drawn large instead; her shoulders run off the edge and the launcher's mask trims them.
+writeFileSync("assets/icon-foreground.png", await render(svg({ scale: 0.9, withFrame: false, withBackground: false }), 1024));
 writeFileSync("assets/icon-background.png", await render(svg({ withFrame: false, withBackground: true, withHydra: false }), 1024));
 const splash = await sharp({ create: { width: 2732, height: 2732, channels: 4, background: C.night } })
   .composite([{ input: await render(svg({ scale: 1, withBackground: false }), 1100), gravity: "center" }])

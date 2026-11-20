@@ -27,10 +27,12 @@ minutes.
 
 ## Runner and SDK
 
-The job runs on `macos-26`: App Store Connect rejects uploads built against an SDK older than **iOS 26**,
-and older images only ship older Xcode versions – the archive would build and sign, then be refused at
-upload. The Xcode version is not pinned, so the image default follows Apple's requirements; the build
-logs the Xcode and SDK version early.
+The job runs on `macos-26` and switches to the **newest stable Xcode installed on the image** (the image's
+default can lag behind). Apple raises the minimum SDK every year: an upload built with the iOS 26.x SDK
+gets warning **ITMS-90725**, and from **April 2027** App Store Connect requires the **iOS 27 SDK (Xcode 27)**.
+The build logs the Xcode and SDK in use, and adds a warning to the run summary while the SDK is older than
+27. If that warning persists because `macos-26` never gets Xcode 27, change `runs-on` to the next image
+(`macos-27`) once GitHub offers it.
 
 ## What "unsigned" means
 
