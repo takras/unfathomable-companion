@@ -35,7 +35,10 @@ concurrency:
 
 jobs:
   build:
-    runs-on: macos-26
+    # Xcode 27 (iOS 27 SDK, required for App Store uploads from April 2027) is only on the `xcode-27` image;
+    # `macos-26` tops out at Xcode 26.x and the iOS 26.5 SDK (warning ITMS-90725). The image is labelled
+    # "preview" by GitHub, which can mean longer queues; `macos-26` still builds if it ever has to be used.
+    runs-on: xcode-27
     timeout-minutes: 45
 
     steps:

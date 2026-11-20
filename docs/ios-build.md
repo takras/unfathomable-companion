@@ -27,12 +27,15 @@ minutes.
 
 ## Runner and SDK
 
-The job runs on `macos-26` and switches to the **newest stable Xcode installed on the image** (the image's
-default can lag behind). Apple raises the minimum SDK every year: an upload built with the iOS 26.x SDK
-gets warning **ITMS-90725**, and from **April 2027** App Store Connect requires the **iOS 27 SDK (Xcode 27)**.
-The build logs the Xcode and SDK in use, and adds a warning to the run summary while the SDK is older than
-27. If that warning persists because `macos-26` never gets Xcode 27, change `runs-on` to the next image
-(`macos-27`) once GitHub offers it.
+The job runs on GitHub's **`xcode-27`** image (macOS with Xcode 27.0–27.2) and switches to the **newest stable
+Xcode on it**, which builds with the iOS 27 SDK. Apple raises the minimum SDK every year: `macos-26` only has
+Xcode 26.x, whose iOS 26.5 SDK gets warning **ITMS-90725** on upload, and from **April 2027** App Store Connect
+requires the **iOS 27 SDK (Xcode 27)**. The build logs the Xcode and SDK in use, and adds a warning to the run
+summary while the SDK is older than 27.
+
+GitHub still labels `xcode-27` a preview, which can mean longer queues. If it misbehaves, `runs-on: macos-26`
+builds and uploads too (with the warning) until April 2027. Each autumn, when Apple raises the minimum again,
+move to the image GitHub announces for the new Xcode (see actions/runner-images).
 
 ## What "unsigned" means
 
