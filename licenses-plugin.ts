@@ -5,8 +5,8 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Plugin } from "vite";
 
-// Packages shipped without being imported as modules (none yet; add native runtimes here when the apps exist).
-const EXTRA_PACKAGES: string[] = [];
+// Shipped inside the native apps but not part of the web bundle.
+const EXTRA_PACKAGES = ["@capacitor/android", "@capacitor/ios", "@capacitor/preferences", "@capacitor/splash-screen"];
 
 const LICENSE_FILE = /^(licen[cs]e|copying|ofl)(\.(md|txt))?$/i;
 

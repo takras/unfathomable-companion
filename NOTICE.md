@@ -38,7 +38,8 @@ If you are a rights holder and want any of this material changed or removed, ple
 
 - **Fonts:** Federant (Cyreal) and EB Garamond (the EB Garamond Project Authors), both under the
   SIL Open Font License 1.1, packaged by Fontsource (MIT).
-- **Software:** React and React DOM (MIT), built with Vite (MIT) and TypeScript (Apache-2.0).
+- **Software:** React and React DOM (MIT); the iOS and Android apps use Capacitor (MIT). Built with Vite (MIT)
+  and TypeScript (Apache-2.0).
 
 The full licence texts of everything bundled into the app are generated at build time into
 `dist/third-party-licenses.txt` and can be read in the app under **About**.

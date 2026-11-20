@@ -1,0 +1,128 @@
+# Builds the native Android app on a GitHub-hosted Linux runner (the counterpart of ios.yml).
+#
+# Manual trigger only, like the iOS build. Targets:
+# - debug-apk: an installable debug APK, no secrets needed (sideload it on a phone or emulator).
+# - release:   a signed App Bundle (.aab) for Google Play, plus a signed APK. Needs the four signing
+#              secrets listed in docs/android-build.md (the upload key, kept out of the repository).
+name: Build Android app
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "What to build"
+        type: choice
+        default: debug-apk
+        options:
+          - debug-apk
+          - release
+
+concurrency:
+  group: android-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      # Capacitor 8 / Android Gradle Plugin 8 need JDK 21. The runner image already has the Android SDK
+      # (ANDROID_HOME) with its licences accepted; Gradle fetches any missing platform itself.
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Builds the web app, copies it into the Android project, and reads the version that
+      # android/app/build.gradle derives from package.json (versionCode = major*10000 + minor*100 + patch).
+      - name: Build web assets and sync Android project
+        id: native
+        run: |
+          npm run build
+          npx cap sync android
+          node -e '
+            const v = require("./package.json").version;
+            const [a, b, c] = v.split(".").map((n) => parseInt(n, 10));
+            console.log(`version_name=${v}`);
+            console.log(`version_code=${a * 10000 + b * 100 + c}`);
+          ' >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+          # gradlew is committed from Windows, where the executable bit can get lost
+          chmod +x android/gradlew
+
+      - name: Build debug APK
+        if: inputs.target == 'debug-apk'
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Collect debug APK
+        if: inputs.target == 'debug-apk'
+        run: |
+          apk="android/app/build/outputs/apk/debug/app-debug.apk"
+          test -f "$apk" || { echo "::error::$apk not found"; exit 1; }
+          cp "$apk" "UnfathomableCompanion-${{ steps.native.outputs.version_name }}-debug.apk"
+          ls -lh *.apk
+
+      # The upload key arrives base64-encoded in a secret and is written outside the workspace;
+      # android/app/build.gradle reads it and the passwords from the UNF_* variables.
+      - name: Write upload keystore
+        if: inputs.target == 'release'
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          missing=
+          for name in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD; do
+            [ -n "${!name}" ] || missing="$missing ANDROID_$name"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing signing secret(s):$missing - see docs/android-build.md"
+            exit 1
+          fi
+          echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/upload-keystore.jks"
+
+      - name: Build signed App Bundle and APK
+        if: inputs.target == 'release'
+        working-directory: android
+        env:
+          UNF_KEYSTORE_FILE: ${{ runner.temp }}/upload-keystore.jks
+          UNF_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          UNF_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          UNF_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: ./gradlew bundleRelease assembleRelease --no-daemon
+
+      - name: Collect release builds
+        if: inputs.target == 'release'
+        run: |
+          name="UnfathomableCompanion-${{ steps.native.outputs.version_name }}"
+          cp android/app/build/outputs/bundle/release/app-release.aab "$name.aab"
+          cp android/app/build/outputs/apk/release/app-release.apk "$name.apk"
+          ls -lh *.aab *.apk
+          rm -f "$RUNNER_TEMP/upload-keystore.jks"
+
+      - name: Upload build
+        uses: actions/upload-artifact@v7
+        with:
+          name: android-${{ inputs.target }}-${{ steps.native.outputs.version_name }}
+          path: |
+            *.apk
+            *.aab
+          if-no-files-found: error
+          retention-days: 14

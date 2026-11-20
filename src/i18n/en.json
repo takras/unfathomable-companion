@@ -300,5 +300,7 @@
   "about.licences.show": "Show full licence texts",
   "about.licences.loading": "Loading…",
   "about.licences.error": "Couldn't load the licence texts.",
-  "about.version": "Version {version}"
+  "about.version": "Version {version}",
+  "about.versionBuild": "Version {version} (build {build})",
+  "about.credit.capacitor": "The iOS and Android apps (with @capacitor/app, /preferences and /splash-screen)."
 }

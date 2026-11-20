@@ -25,6 +25,23 @@ npm run dev      # http://localhost:5173
 npm run build    # static site in dist/
 ```
 
+## Native apps (Capacitor)
+
+App id `net.takras.unfathomable`, name "Unfathomable Companion". The native projects live in `android/` and
+`ios/` and are committed; the web build in `dist/` is copied into them by `cap sync`. Set up like BSG Companion.
+
+- **Android** - build on GitHub Actions (**Build Android app**: debug APK, or a signed App Bundle and APK) or
+  locally with `npm run android:debug` / `android:release` / `android:install`. Signing and secrets:
+  [docs/android-build.md](docs/android-build.md).
+- **iOS** - built on GitHub Actions (**Build iOS app**: unsigned check, simulator build, or a signed TestFlight
+  upload), no Mac needed. Secrets and App Store Connect setup: [docs/ios-build.md](docs/ios-build.md).
+- **Versions** - `package.json` version → Android `versionName` / iOS marketing version; build number
+  major·10000 + minor·100 + patch. Bump with `npm version patch|minor|major` before a store upload. About shows
+  the installed app's own version and build.
+- **Icons and splash** - `npm run icons` draws the Hydra icon (`scripts/icon.mjs`) and generates every native
+  size with `@capacitor/assets`.
+- After changing web code, run `npm run cap:sync` (or the scripts above) before building natively.
+
 ## Assets
 
 `source/` holds the rulebook PDFs and the original card scans (not bundled). Generated from them:

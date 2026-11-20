@@ -6,3 +6,8 @@ dist/
 # Rulebook PDFs and card scans (466 MB): kept locally, used by scripts/
 source/
 __pycache__/
+
+# signing keys and their passwords must never be committed
+*.jks
+*.keystore
+keystore.properties

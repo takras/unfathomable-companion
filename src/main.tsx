@@ -1,4 +1,5 @@
 import { StrictMode } from "react";
+import { Capacitor } from "@capacitor/core";
 import { createRoot } from "react-dom/client";
 // Free stand-ins for the rulebook's fonts: Federant for Halbfette Secession (headings),
 // EB Garamond for Arno Pro (text).
@@ -13,13 +14,18 @@ import { STORAGE_KEY, StoreProvider } from "./state/store";
 import { applyTheme, initialTheme } from "./state/theme";
 import "./styles.css";
 
+// Native app (not a mobile browser): lets CSS and components adapt, e.g. the About page's version.
+if (Capacitor.isNativePlatform()) document.documentElement.dataset.native = "";
 applyTheme(initialTheme());
 setLanguage(initialLanguage());
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <StoreProvider initialRaw={loadRaw(STORAGE_KEY)}>
-      <App />
-    </StoreProvider>
-  </StrictMode>,
-);
+// The saved game is read asynchronously (native storage on iOS/Android) before the first render.
+loadRaw(STORAGE_KEY).then((raw) => {
+  createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+      <StoreProvider initialRaw={raw}>
+        <App />
+      </StoreProvider>
+    </StrictMode>,
+  );
+});

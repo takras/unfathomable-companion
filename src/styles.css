@@ -18,6 +18,12 @@
   --face: #c4d3c7;
 }
 :root {
+  /* Safe areas: iOS reports them through env(); Android's edge-to-edge mode (Capacitor SystemBars,
+     insetsHandling "css") through --safe-area-inset-* variables. Use whichever is larger. */
+  --sa-top: max(env(safe-area-inset-top, 0px), var(--safe-area-inset-top, 0px));
+  --sa-bottom: max(env(safe-area-inset-bottom, 0px), var(--safe-area-inset-bottom, 0px));
+  --sa-left: max(env(safe-area-inset-left, 0px), var(--safe-area-inset-left, 0px));
+  --sa-right: max(env(safe-area-inset-right, 0px), var(--safe-area-inset-right, 0px));
   --ink: #1c1b20;
   --muted: #6f7486;
   --frame: #2d254b; /* the purple of the frames and flourishes */
@@ -212,7 +218,7 @@ select {
   z-index: 10;
   background-color: var(--paper);
   background-image: var(--grain);
-  padding: env(safe-area-inset-top) 16px 0;
+  padding: var(--sa-top) max(16px, var(--sa-right)) 0 max(16px, var(--sa-left));
   /* double rule */
   border-bottom: 1.5px solid var(--frame);
   box-shadow: 0 2px 0 var(--paper), 0 3.5px 0 var(--frame);
@@ -293,7 +299,7 @@ select {
 
 main {
   flex: 1;
-  padding: 18px 16px;
+  padding: 18px max(16px, var(--sa-right)) 18px max(16px, var(--sa-left));
 }
 .view > * + * {
   margin-top: 16px;
@@ -301,7 +307,7 @@ main {
 /* like the "— 4 —" page numbers */
 .footer {
   text-align: center;
-  padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+  padding: 18px 16px calc(18px + var(--sa-bottom));
 }
 .footer::before,
 .footer::after {
@@ -927,9 +933,9 @@ svg.game-icon {
 .toc-drawer {
   position: fixed;
   z-index: 40;
-  left: max(8px, env(safe-area-inset-left));
-  top: calc(env(safe-area-inset-top) + 8px);
-  bottom: calc(env(safe-area-inset-bottom) + 70px);
+  left: max(8px, var(--sa-left));
+  top: calc(var(--sa-top) + 8px);
+  bottom: calc(var(--sa-bottom) + 70px);
   width: min(330px, 86vw);
   display: flex;
   flex-direction: column;
@@ -1026,7 +1032,7 @@ button.toc-fab {
   position: fixed;
   z-index: 41;
   right: max(16px, calc((100vw - 760px) / 2 + 16px));
-  bottom: calc(16px + env(safe-area-inset-bottom));
+  bottom: calc(16px + var(--sa-bottom));
   background: var(--frame);
   color: var(--paper);
   border: 0;
@@ -1522,7 +1528,7 @@ mark {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 16px;
+  padding: calc(16px + var(--sa-top)) 16px calc(16px + var(--sa-bottom));
 }
 .lightbox img {
   max-width: 100%;

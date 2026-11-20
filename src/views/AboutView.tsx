@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { App } from "@capacitor/app";
+import { Capacitor } from "@capacitor/core";
 import { T, t } from "../i18n";
 
 interface Credit {
@@ -20,6 +22,7 @@ const credits = (): Record<string, Credit[]> => ({
   ],
   software: [
     { name: "React", detail: t("about.credit.react"), license: "MIT", url: "https://react.dev" },
+    { name: "Capacitor", detail: t("about.credit.capacitor"), license: "MIT", url: "https://capacitorjs.com" },
     { name: "Vite", detail: t("about.credit.vite"), license: "MIT", url: "https://vite.dev" },
     { name: "TypeScript", detail: t("about.credit.typescript"), license: "Apache-2.0", url: "https://www.typescriptlang.org" },
   ],
@@ -74,6 +77,25 @@ function LicenceTexts() {
   );
 }
 
+/**
+ * The version the user is running: on the web, the package.json version baked in at build time; in the
+ * native apps, read from the installed app (Android versionName/versionCode, iOS version/build).
+ */
+function AppVersion() {
+  const [info, setInfo] = useState<{ version: string; build?: string }>({ version: __APP_VERSION__ });
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+    App.getInfo()
+      .then(({ version, build }) => setInfo({ version, build }))
+      .catch(() => {});
+  }, []);
+  return (
+    <p className="muted small center">
+      {info.build ? t("about.versionBuild", { version: info.version, build: info.build }) : t("about.version", { version: info.version })}
+    </p>
+  );
+}
+
 export function AboutView() {
   const c = credits();
   return (
@@ -118,7 +140,7 @@ export function AboutView() {
         <LicenceTexts />
       </section>
 
-      <p className="muted small center">{t("about.version", { version: __APP_VERSION__ })}</p>
+      <AppVersion />
     </div>
   );
 }

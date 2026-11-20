@@ -218,14 +218,14 @@ const background = (id) => `
 `;
 
 /** Full icon: background, frame, Hydra. `scale` shrinks the art for maskable icons' safe zone. */
-const svg = ({ scale = 1, withFrame = true, withBackground = true } = {}) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+const svg = ({ scale = 1, withFrame = true, withBackground = true, withHydra = true } = {}) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
   ${withBackground ? background("bg") : ""}
   <defs>
     <!-- the shoulders end at the inner frame rule -->
     <clipPath id="inside"><rect x="124" y="0" width="776" height="876"/></clipPath>
   </defs>
   <g transform="translate(${512 * (1 - scale)} ${512 * (1 - scale)}) scale(${scale})">
-    <g clip-path="${withFrame ? "url(#inside)" : "none"}"><g transform="translate(0 20)">${hydra}</g></g>
+    <g clip-path="${withFrame ? "url(#inside)" : "none"}"><g transform="translate(0 20)">${withHydra ? hydra : ""}</g></g>
     ${withFrame ? frame : ""}
   </g>
 </svg>`;
@@ -271,4 +271,20 @@ writeFileSync("public/icon-192.png", await render(full, 192));
 writeFileSync("public/icon-512.png", await render(full, 512));
 writeFileSync("public/icon-maskable-512.png", await render(maskable, 512));
 writeFileSync("assets/icon-1024.png", await render(full, 1024));
-console.log("wrote assets/icon.svg, assets/icon-1024.png and the web icons in public/");
+
+// Sources for the native app icons and splash screens (`npx @capacitor/assets generate`, run by
+// `npm run icons`), as in BSG Companion:
+// - icon-only: the whole icon (iOS, legacy Android)
+// - icon-foreground / icon-background: Android adaptive icon layers. Launchers mask the outer third,
+//   so the foreground (frame and Hydra on transparency) is scaled to fit the visible middle.
+// - splash / splash-dark: the framed Hydra on the night sky, 2732 px square.
+writeFileSync("assets/icon-only.png", await render(full, 1024));
+writeFileSync("assets/icon-foreground.png", await render(svg({ scale: 0.66, withBackground: false }), 1024));
+writeFileSync("assets/icon-background.png", await render(svg({ withFrame: false, withBackground: true, withHydra: false }), 1024));
+const splash = await sharp({ create: { width: 2732, height: 2732, channels: 4, background: C.night } })
+  .composite([{ input: await render(svg({ scale: 1, withBackground: false }), 1100), gravity: "center" }])
+  .png()
+  .toBuffer();
+writeFileSync("assets/splash.png", splash);
+writeFileSync("assets/splash-dark.png", splash);
+console.log("wrote assets/icon.svg, the native icon and splash sources in assets/, and the web icons in public/");

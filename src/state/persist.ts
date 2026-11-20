@@ -1,7 +1,19 @@
-// Game state is kept in localStorage. When the native apps are added, mirror it into
-// Capacitor Preferences here (the OS may clear a WebView's localStorage), as BSG Companion does.
+import { Capacitor } from "@capacitor/core";
+import { Preferences } from "@capacitor/preferences";
 
-export function loadRaw(key: string): string | null {
+// On iOS/Android the WebView's localStorage can be cleared by the OS, so the native apps
+// keep the game state in Capacitor Preferences (UserDefaults / SharedPreferences) as well.
+const native = Capacitor.isNativePlatform();
+
+export async function loadRaw(key: string): Promise<string | null> {
+  if (native) {
+    try {
+      const { value } = await Preferences.get({ key });
+      if (value) return value;
+    } catch {
+      // fall through to localStorage
+    }
+  }
   try {
     return localStorage.getItem(key);
   } catch {
@@ -15,4 +27,5 @@ export function saveRaw(key: string, value: string) {
   } catch {
     // storage unavailable (private mode etc.): the app still works, just without persistence
   }
+  if (native) Preferences.set({ key, value }).catch(() => {});
 }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Unfathomable Companion</string>
+    <string name="title_activity_main">Unfathomable Companion</string>
+    <string name="package_name">net.takras.unfathomable</string>
+    <string name="custom_url_scheme">net.takras.unfathomable</string>
+</resources>
