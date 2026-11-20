@@ -57,6 +57,8 @@ BSG Companion can be reused:
 The key is a **Team key with the Admin role** (App Store Connect → Users and Access → Integrations →
 App Store Connect API); App Manager cannot manage certificates.
 
+The App Store listing asks for a privacy policy URL: **https://unfathomable.takras.net/privacy.html**.
+
 An **app record with bundle id `net.takras.unfathomable`** must exist in App Store Connect before the first upload
 (Apps → + → New App). `-allowProvisioningUpdates` registers the bundle id in the developer portal, but it
 does not create that record.

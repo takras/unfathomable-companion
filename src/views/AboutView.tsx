@@ -3,6 +3,10 @@ import { App } from "@capacitor/app";
 import { Capacitor } from "@capacitor/core";
 import { T, t } from "../i18n";
 
+/** The public website (GitHub Pages, custom domain). Absolute, so the native apps open it in the browser. */
+export const SITE_URL = "https://unfathomable.takras.net/";
+export const PRIVACY_URL = `${SITE_URL}privacy.html`;
+
 interface Credit {
   name: string;
   detail: string;
@@ -127,7 +131,12 @@ export function AboutView() {
         <p>
           <T k="about.licence.text" />
         </p>
-        <p className="muted small">{t("about.privacy")}</p>
+        <p className="muted small">
+          {t("about.privacy")}{" "}
+          <a href={PRIVACY_URL} target="_blank" rel="noopener noreferrer">
+            {t("about.privacyLink")}
+          </a>
+        </p>
       </section>
 
       <section className="card">

@@ -1,5 +1,4 @@
-# Builds the web app and publishes it to GitHub Pages
-# (https://takras.github.io/unfathomable-companion/ unless a custom domain is set in the repo settings).
+# Builds the web app and publishes it to GitHub Pages (custom domain: unfathomable.takras.net).
 # Runs on every push to main, or manually from the Actions tab.
 # The build uses relative paths and hash routing, so it works from the repository sub-folder as is.
 name: Deploy to GitHub Pages

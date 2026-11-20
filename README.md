@@ -17,6 +17,15 @@ React + Vite + TypeScript, client-side only, state in localStorage, English text
   links (`#/rules/rule-4.13`) and linked related topics. With From the Abyss on (Setup), the expansion's chapters
   follow the appendices and its changes to core rules are patched in place and marked (`src/content/rules-abyss.ts`).
 
+## Website
+
+Deployed to GitHub Pages at **https://unfathomable.takras.net/** by `.github/workflows/deploy-pages.yml` on every
+push to `main` (or manually from the Actions tab). The privacy policy is `public/privacy.html` →
+https://unfathomable.takras.net/privacy.html (also linked from About & licences).
+
+One-time setup: repo **Settings → Pages → Source: GitHub Actions**, custom domain `unfathomable.takras.net`, then
+**Enforce HTTPS** once the certificate is issued; DNS: `CNAME unfathomable → takras.github.io`.
+
 ## Development
 
 ```bash

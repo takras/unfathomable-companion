@@ -78,8 +78,8 @@ npm run android           # open the project in Android Studio
 ## Google Play
 
 The app id is **`net.takras.unfathomable`**. Create the app in the Play Console first, then upload the
-`.aab` to a testing track. Play also asks for a privacy policy URL: the app collects no data (see
-About & licences in the app).
+`.aab` to a testing track. Play also asks for a privacy policy URL:
+**https://unfathomable.takras.net/privacy.html** (the app collects no data; also linked from About & licences).
 
 ## How the pieces fit
 

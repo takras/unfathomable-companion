@@ -302,5 +302,6 @@
   "about.licences.error": "Couldn't load the licence texts.",
   "about.version": "Version {version}",
   "about.versionBuild": "Version {version} (build {build})",
-  "about.credit.capacitor": "The iOS and Android apps (with @capacitor/app, /preferences and /splash-screen)."
+  "about.credit.capacitor": "The iOS and Android apps (with @capacitor/app, /preferences and /splash-screen).",
+  "about.privacyLink": "Privacy policy"
 }
